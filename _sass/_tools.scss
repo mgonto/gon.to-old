@@ -1,0 +1,26 @@
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 0;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.25s;
+
+    &.primary {
+        background-color: darken($blue, 15);
+        &:hover {
+            background-color: darken($blue, 20);
+        }
+    }
+    &.secondary {
+        background-color: $orange;
+        &:hover {
+            background-color: darken($orange, 5);
+        }
+    }
+}

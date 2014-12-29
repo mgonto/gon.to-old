@@ -1,0 +1,130 @@
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+.row * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+.row:after {
+    clear: both;
+}
+
+.column-1,
+.column-1-3,
+.column-2-3,
+.column-1-4,
+.column-2-4,
+.column-3-4,
+.column-1-5,
+.column-2-5,
+.column-3-5,
+.column-4-5,
+.column-4-5,
+.column-1-12,
+.column-2-12,
+.column-3-12,
+.column-4-12,
+.column-5-12,
+.column-6-12,
+.column-7-12,
+.column-8-12,
+.column-9-12,
+.column-10-12,
+.column-11-12  {
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    float: left;
+    padding: 0 15px;
+}
+
+/* full width */
+.column-1 { width: 100%; }
+/* 3 columns */
+.column-1-3 { width: 33.3333%; }
+.column-2-3 { width: 66.6666%; }
+/* 4 columns */
+.column-1-4 { width: 25%; }
+.column-2-4 { width: 50%; }
+.column-3-4 { width: 75%; }
+/* 5 columns */
+.column-1-5 { width: 20%; }
+.column-2-5 { width: 40%; }
+.column-3-5 { width: 60%; }
+.column-4-5 { width: 80%; }
+/* 12 columns */
+.column-1-12 { width: 8.3333%; }
+.column-2-12 { width: 16.6666%; }
+.column-3-12 { width: 24.9999%; }
+.column-4-12 { width: 33.3332%; }
+.column-5-12 { width: 41.6665%; }
+.column-6-12 { width: 49.9998%; }
+.column-7-12 { width: 58.3331%; }
+.column-8-12 { width: 66.6664%; }
+.column-9-12 { width: 74.9997%; }
+.column-10-12 { width: 83.333%; }
+.column-11-12 { width: 91.6663%; }
+
+.column-1.centered,
+.column-1-3.centered,
+.column-2-3.centered,
+.column-1-4.centered,
+.column-2-4.centered,
+.column-3-4.centered,
+.column-1-5.centered,
+.column-2-5.centered,
+.column-3-5.centered,
+.column-4-5.centered,
+.column-4-5.centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+@media screen and (max-width: 320px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+
+    .column-1,
+    .column-1-3,
+    .column-2-3,
+    .column-1-4,
+    .column-2-4,
+    .column-3-4,
+    .column-1-5,
+    .column-2-5,
+    .column-3-5,
+    .column-4-5,
+    .column-4-5 {
+        display: inline-block;
+        float: none;
+        width: 100%;
+    }
+}

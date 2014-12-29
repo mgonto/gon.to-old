@@ -1,0 +1,62 @@
+/*
+CSS Mini Reset
+Based on https://github.com/vladocar/CSS-Mini-Reset
+*/
+
+/* ---------------------
+Apply a natural box layout model to all elements
+http://paulirish.com/2012/box-sizing-border-box-ftw/
+--------------------- */
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ---------------------
+Clearfix
+http://nicolasgallagher.com/micro-clearfix-hack/
+--------------------- */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+.cf {
+    *zoom: 1;
+}
+
+
+/* ---------------------
+General DOM Elements
+--------------------- */
+html, body, div, form, fieldset, legend, label {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    text-align: left;
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6, table, caption, p, ol, ul, img {
+    margin: 0;
+}
+
+img { border: 0; }

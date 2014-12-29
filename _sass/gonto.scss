@@ -1,300 +1,33 @@
-#logo {padding-top:0px;}#logo {padding-bottom:0px;}#logo {margin-left:0px;}#logo {margin-right:0px;}#nav-main {margin-top:10px;}#nav-main {margin-bottom:10px;}.headerfont, .tp-caption {font-family:Roboto Slab;}
-.topbarmenu ul li {font-family:Roboto Slab;}
-#kadbreadcrumbs {font-family:Open Sans;}.home-message:hover {background-color:#4a90e2; background-color: rgba(74, 144, 226, 0.6);}
-nav.woocommerce-pagination ul li a:hover, .wp-pagenavi a:hover, .panel-heading .accordion-toggle, .variations .kad_radio_variations label:hover, .variations .kad_radio_variations label.selectedValue {border-color: #4a90e2;}
-a, #nav-main ul.sf-menu ul li a:hover, .product_price ins .amount, .price ins .amount, .color_primary, .primary-color, #logo a.brand, #nav-main ul.sf-menu a:hover,
-.woocommerce-message:before, .woocommerce-info:before, #nav-second ul.sf-menu a:hover, .footerclass a:hover, .posttags a:hover, .subhead a:hover, .nav-trigger-case:hover .kad-menu-name,
-.nav-trigger-case:hover .kad-navbtn, #kadbreadcrumbs a:hover, #wp-calendar a {color: #4a90e2;}
-.widget_price_filter .ui-slider .ui-slider-handle, .product_item .kad_add_to_cart:hover, .product_item:hover .kad_add_to_cart:hover, .kad-btn-primary, html .woocommerce-page .widget_layered_nav ul.yith-wcan-label li a:hover, html .woocommerce-page .widget_layered_nav ul.yith-wcan-label li.chosen a,
-.product-category.grid_item a:hover h5, .woocommerce-message .button, .widget_layered_nav_filters ul li a, .widget_layered_nav ul li.chosen a, .wpcf7 input.wpcf7-submit, .yith-wcan .yith-wcan-reset-navigation,
-#containerfooter .menu li a:hover, .bg_primary, .portfolionav a:hover, .home-iconmenu a:hover, p.demo_store, .topclass, #commentform .form-submit #submit, .kad-hover-bg-primary:hover, .widget_shopping_cart_content .checkout,
-.login .form-row .button, .variations .kad_radio_variations label.selectedValue, #payment #place_order, .checkout-button, input[type="submit"].button, .order-actions .button  {background: #4a90e2;}a:hover {color: #f9a52f;} .kad-btn-primary:hover, .login .form-row .button:hover, #payment #place_order:hover, .yith-wcan .yith-wcan-reset-navigation:hover, .widget_shopping_cart_content .checkout:hover,
-.woocommerce-message .button:hover, #commentform .form-submit #submit:hover, .wpcf7 input.wpcf7-submit:hover, .widget_layered_nav_filters ul li a:hover,
-.widget_layered_nav ul li.chosen a:hover, .checkout-button:hover, .order-actions .button:hover, input[type="submit"].button:hover, .product_item:hover .kad_add_to_cart  {background: #f9a52f;}.topclass {background:#4a90e2    ;}.headerclass {background:#4a90e2    ;}.kad-hidepostauthortop, .postauthortop {display:none;}.product_item .product_details h5 {min-height:40px;}.homepagecontent {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-.homecontent section {
-    display: inline-table;
-    width: 100%;
-}
-.homecontent hr {
-    margin: 10px 0;
-    border-top: 1px solid #A6A6A6;
-}
-h1, h2, h3, h4 {
-    text-transform: uppercase;
-}
-.contentclass {
-    margin-top: 20px;
-    position: relative;
-    padding: 0 0 40px;
+body {
+    font-family: $base-font-family;
+    font-weight: 300;
+    -webkit-text-size-adjust: 100%;
 }
 
-.home .contentclass {
-    margin-top: 0;
+.image {
+    height: 90vh;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
 }
 
-.flexslider .slides li img, #imageslider {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+.services,
+.projects,
+.talks,
+.contact {
+    padding: $spacing-unit 0;
 }
+
+.projects,
 .talks {
-    background-color: #2566B3;
-    color: #FFF;
-    padding: 0 0 20px 0;
-    border-bottom: 4px solid #1C2474;
+    color: white;
 }
+
 .projects {
     background-color: #777;
-    color: #FFF;
-    padding: 0 0 20px 0;
-}
-.btn-primary {
-    background-color: #F9A530;
-    border: none;
-    border-radius: 0;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    margin-top: 20px;
-}
-.btn-primary:hover {
-    background-color: #FFB54D;
-}
-.linkedin,
-.twitter,
-.github {
-    padding-left: 45px;
-    color: #333;
-    line-height: 50px;
-    height: 50px;
-    display: inline-block;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: 0.25s;
-}
-.linkedin:hover,
-.twitter:hover,
-.github:hover {
-    color: #F5A623;
-}
-.twitter {
-    background: url('http://gon.to/wp-content/uploads/2014/02/twitter.png') no-repeat left center;
-}
-.linkedin {
-    background: url('http://gon.to/wp-content/uploads/2014/02/linkedin.png') no-repeat left center;
-}
-.github {
-    background: url('http://gon.to/wp-content/uploads/2014/02/github.png') no-repeat left center;
 }
 
-.widget-inner h3 {
-    display: none;
-}
-#pageheader {
-    display: none;
-}
-#pageheader .page-header {
-    border-top: none;
-    border-bottom: none;
-    margin: 0;
-    padding: 0;
-}
-#menu-blog > li.menu-blog.current-menu-item.current_page_item.current_page_parent {
-    padding: 10px 0;
-    background: #1C2474;
-    margin: -10px 0;
-}
-#menu-blog > li.menu-blog.current-menu-item.current_page_item.current_page_parent a {
-    color: #FFFFFF;
-}
-#nav-main ul.sf-menu a:hover,
-.menu-blog.current_page_item a {
-    background-color: #F9A52F;
-    color: #FFF;
-}
-.sidebar .widget-inner li {
-    border-bottom: 1px solid #DDD;
-    padding: 5px 0;
-}
-.sidebar .widget-inner li a {
-    color: #FFF;
-}
-.sidebar .widget-inner li a:hover {
-    color: #F9A530;
-}
-.sidebar ul {
-    margin: 0 !important;
-}
-.sidebar .widget-inner li a:before {
-}
-.widget_recent_entries .widget-inner li a:before {
-    display: none;
-}
-.widget-first {
-    margin: 0;
-}
-.postlist article {
-    margin: 0 0 20px;
-    border: none;
-    border-bottom: 1px solid #999;
-}
-.postlist .col-md-12 header {
-    padding: 0;
-}
-.postcontent h2 {
-    margin: 0;
-    line-height: 30px;
-}
-.postlist .col-md-12 .entry-content {
-    padding: 0;
-    margin-top: 10px;
-}
-.postdate {
-    margin: 0;
-    background: #4A90E2;
-    color: #fff;
-}
-
-.flexslider.loading {
-    max-width: 100% !important;
-}
-
-.single-article .post header {
-    padding: 0;
-}
-.post h1 {
-    font-size: 24px;
-    line-height: 30px;
-    margin-top: 0;
-}
-
-.single-article article {
-    margin-top: 0;
-}
-.single-article .post-single-img {
-    margin-bottom: 15px;
-}
-.widget-inner .form-search {
-    max-width: 100%;
-}
-.sliderclass {
-    padding: 0;
-}
-.homepagecontent .container {
-    margin: 10px auto 20px !important;
-}
-.blue {
-    color: #4A90E2;
-}
-
-.wpcf7 input, .wpcf7 textarea {
-    max-width: 100%;
-}
-
-.wpcf7 input.wpcf7-submit {
-    padding: 10px 40px;
-}
-.talks .btn-primary {
-    margin-top: 0;
-    border-radius: 2px;
-    background-color: #1C2474;
-    transition: 0.25s;
-}
-.talks .btn-primary:hover {
-    background-color: #4A90E2;
-}
-
-.services h2 {
-    text-align: center;
-}
-
-.services .services-text {
-    text-align: justify;
-}
-.headerclass {
-    top: inherit !important;
-    width: 100% !important;
-    position: fixed;
-    z-index: 1;
-    transition: 0.25s;
-}
-
-.headerclass.fixed {
-    background: rgba(74, 144, 226, 0.85);
-}
-
-.sticky-wrapper {
-    margin-bottom: 0px !important;
-}
-
-.scroll-highlight {
-    background-color: #F9A52F;
-}
-.sidebar {
-    background: #2F6CB3;
-    padding: 20px;
-    position: fixed;
-    top: 58px;
-    bottom: 0;
-}
-#thelogo > img {
-    height: 34px;
-    margin-top: 4px;
-}
-#topcontrol {
-    display: none;
-}
-#containerfooter {
-    display: none;
-}
-.services {
-    padding: 30px 0;
-}
-.sidebar a {
-    color: #FFF;
-}
-
-.kudo-box + br {
-    display: none;
-}
-
-.home .kudo-box {
-    display: none;
-}
-
-.projects h4 a {
-    color: #FFF;
-}
-.projects h4 a:hover {
-    color: #f9a52f;
-}
-.featured {
-    margin-top: 30px;
-}
-
-@media screen and (max-device-width: 384px)  {
-    .sidebar {
-        position: initial;
-        top: initial;
-        bottom: initial;
-    }
-}
-
-@media only screen and (max-device-width : 768px) {
-    .sidebar {
-        position: initial;
-        top: initial;
-        bottom: initial;
-    }
-}
-@media only screen and (max-device-width : 1024px)  {
-    .sidebar {
-        position: initial;
-        top: initial;
-        bottom: initial;
-    }
+.talks {
+    background-color: $blue;
 }
