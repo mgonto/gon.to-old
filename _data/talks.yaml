@@ -12,6 +12,7 @@
     - cookies
     - tokens
   link: 'https://www.youtube.com/watch?v=lDb_GANDR8U&list=UUEGUP3TJJfMsEM_1y8iviSQ'
+  type: talk
   linkText: 'View the talk online'
 
 - title:  'Restangular 2.0: The future and beyond'
@@ -26,6 +27,7 @@
     - beyond angular
   link: https://www.youtube.com/watch?v=fWar75R1NGo
   date: October 2014
+  type: talk
   linkText: 'View the talk online'
 
 
@@ -41,6 +43,7 @@
     - subject
     - stream
   link: https://www.parleys.com/play/53677646e4b0593229b85841/chapter1/about
+  type: talk
   linkText: 'View the talk online'
 
 
@@ -57,6 +60,7 @@
     - restangular
     - angularjs
   link: https://www.parleys.com/play/535a189ee4b0c5ba17d43455/chapter1/about
+  type: talk
   linkText: 'View the talk online'
 
 
@@ -71,6 +75,7 @@
     - backend
     - play
     - java
+  type: talk
   link: http://vimeo.com/38604912
   linkText: 'View the talk online'
 
@@ -81,6 +86,7 @@
     useful tips and things every documentation aimed for developers should have.
   date: February 2015
   future: true
+  type: talk
   labels:
     - documentation
     - developers
