@@ -33,14 +33,14 @@ I&#8217;ve been working with AngularJS this past months and I&#8217;ve extracted
 
 **What&#8217;s the idea of this Framework?**
 
-****We&#8217;re used to creating REST APIs using Resources in our BackEnd. However, when using AngularJS it&#8217;s not easy to work with them using $resource and $http. I&#8217;ve built a service that will help you get, update and delete resources following the &#8220;tree&#8221; that you&#8217;ve created. I&#8217;ve tried this out with Play! Framework and Ruby On Rails and this fits perfectly with both.
+We&#8217;re used to creating REST APIs using Resources in our BackEnd. However, when using AngularJS it&#8217;s not easy to work with them using $resource and $http. I&#8217;ve built a service that will help you get, update and delete resources following the &#8220;tree&#8221; that you&#8217;ve created. I&#8217;ve tried this out with Play! Framework and Ruby On Rails and this fits perfectly with both.
 
 **How can I add this?**
 
 In order to add this, you must download restangular.js [from here][1] and then link to it in your HTML file. **Restangular depends only on angular, angular-resource and underscore.** After this, you must just declare the dependency to your app.
 
-<noscript>
-  <pre><code class="language-javascript javascript">var app = angular.module('angularjs-starter', ['restangular']);
+````js
+var app = angular.module('angularjs-starter', ['restangular']);
 
 // Using RestangularProvider we can configure properties. To check all properties go to https://github.com/mgonto/restangular
 app.config(function(RestangularProvider) {
@@ -51,15 +51,14 @@ app.config(function(RestangularProvider) {
 angular.module('angularjs-starter').controller('NewCtrl', function($scope, Restangular) {
   // My controller
 });
-</code></pre>
-</noscript>
+````
 
 **Let&#8217;s start using it!!!**
 
 I think that the best introduction for a Framework is Code. So let&#8217;s code <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> 
 
-<noscript>
-  <pre><code class="language-javascript javascript">// First way of creating a Restangular object. Just saying the base URL
+```js
+// First way of creating a Restangular object. Just saying the base URL
 var baseAccounts = Restangular.all('accounts');
 
 // This will query /accounts and return a promise. As Angular supports setting promises to scope variables
@@ -136,8 +135,8 @@ var account = Restangular.one("accounts", 123);
 $scope.account = account.get({single: true});
 
 // POST /accounts/123/messages?param=myParam with the body of name: "My Message"
-account.customPOST("messages", {param: "myParam"}, {}, {name: "My Message"})</code></pre>
-</noscript>
+account.customPOST("messages", {param: "myParam"}, {}, {name: "My Message"})
+```
 
 That&#8217;s it <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Please tell me what you guys think! If you want to read more about Restangular [You can click here to check it out][2].
 
