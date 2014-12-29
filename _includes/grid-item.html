@@ -1,8 +1,15 @@
 <div class="grid-item">
-    <h1 class="title">Titulo de la charla o repo</h1>
-    <p>Descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus suscipit explicabo commodi sed magnam, minima vitae accusantium quo impedit saepe? Velit laboriosam earum magnam voluptatum magni, dolorum doloribus inventore officiis.</p>
-    <div class="date">fecha</div>
-    <div class="labels">Labels</div>
-    <div class="forks">forks</div>
-    <div class="stars">stars</div>
+    <h1 class="title">{{include.item.title}}</h1>
+    <p>{{include.item.description}}<p>
+    {% if included.item.date %}
+      <div class="date">{{include.item.date}}</div>
+    {% endif %}
+    <div class="labels">{{include.item.labels | join: ","}}</div>
+    {% if included.item.forks %}
+      <div class="forks">{{include.items.forks}}</div>
+    {% endif %}
+    {% if included.item.stars %}
+      <div class="stars">{{include.items.stars}}</div>
+    {% endif %}
+
 </div>

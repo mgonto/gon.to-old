@@ -1,0 +1,25 @@
+- title:  'Restangular 2.0: The future and beyond'
+  description: >
+    A talk about what to expect from the upcoming version of Restangular.
+  labels:
+    - restangular
+    - prototype
+    - extensibility
+    - es6
+    - beyond angular
+  link: https://www.youtube.com/watch?v=fWar75R1NGo
+  date: October 2014
+
+
+- title: Reactive Angular
+  description: >
+    An introduction to Reactive Programming and examples of
+    how to use it with modern MVC FrontEnd JS frameworks like AngularJS.
+  date: April 2014
+  labels:
+    - reactive
+    - AngularJS
+    - observables
+    - subject
+    - stream
+  link: https://www.parleys.com/play/53677646e4b0593229b85841/chapter1/about

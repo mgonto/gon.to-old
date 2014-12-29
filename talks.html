@@ -1,3 +1,8 @@
 ---
 layout: grid
 ---
+<div>
+  {% for talk in site.data.talks %}
+    {% include grid-item.html item=talk %}
+  {% endfor %}
+</div>
