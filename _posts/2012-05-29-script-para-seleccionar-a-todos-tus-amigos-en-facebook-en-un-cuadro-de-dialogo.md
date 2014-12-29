@@ -38,14 +38,15 @@ Una vez abierta esta ventana, scrollearemos hasta el final (para que se carguen 
 
 &nbsp;
 
-<pre>var x=document.getElementsByTagName("input");
+````js
+>var x=document.getElementsByTagName("input");
 for(var i=0;i&lt;x.length;i++) {
   if (x[i].type == 'checkbox') {
     x[i].click();
   }
 }; 
 alert('Todos tus amigos seleccionados');
-</pre>
+````
 
 Una vez realizado esto, veremos un dialogo diciendonos que todos los amigos fueron seleccionados, lo cual sera cierto :D:D
 

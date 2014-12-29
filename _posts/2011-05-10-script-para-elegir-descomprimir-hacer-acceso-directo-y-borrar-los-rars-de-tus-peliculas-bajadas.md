@@ -33,7 +33,8 @@ A continuacion añado 2 scripts, uno para listar las peliculas para ver y otro p
 
 Primero el de listar las peliculas a ver:
 
-<pre lang="bash">#!/bin/bash
+````bash
+#!/bin/bash
 TORRENT_DIR='/home/gonto/downloads/torrents';
 VIDEOS_DIR="/home/gonto/Desktop/videos";
 pushd .
@@ -72,11 +73,12 @@ else
 fi
 done
 IFS="$OLD_IFS"
-</pre>
+````
 
 Y ahora el encargado de borrarlas
 
-<pre lang="bash">#!/bin/bash
+````bash
+#!/bin/bash
 TORRENT_DIR='/home/gonto/downloads/torrents';
 VIDEOS_DIR="/home/gonto/Desktop/videos";
 ls -tr $TORRENT_DIR | columns -c 1 | awk 'BEGIN {i=0;} {i++; print i,$0}';
@@ -102,7 +104,7 @@ do
 rm -rf $peli
 done
 IFS="$OLD_IFS"
-</pre>
+````
 
 Obviamente para ambos scripts tendran que cambiar el directorio de Torrents y el de videos para los que ustedes queiran listar y hacer accesos directos respectivamente.
 

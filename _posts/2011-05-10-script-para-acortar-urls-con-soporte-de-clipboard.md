@@ -25,7 +25,8 @@ Un amigo me acaba de comentar que estaria bueno agregarle al script que ademas d
 
 Para esto, instalaremos primero el programa xclip (con apt-get) y luego reemplazaremos el script existente que tenemos para acortar por el siguiente, reemplazando como la otra vez el usuario y la api:
 
-<pre lang="bash">#!/bin/bash
+````bash
+#!/bin/bash
 progname=$(basename $0)
 if [ -z "$1" ]
 then
@@ -40,4 +41,4 @@ RESPONSE=$(/usr/bin/env curl -s -A Mozilla $BITLYURL'&#038;longUrl='$ENCODEDURL)
 TEXT=$(echo $RESPONSE | sed -e 's/[{}]/''/g' | awk -v k="text" '{n=split($0,a,","); for (i=1; i&lt;=n; i++) print a[i]}' | sed -n 4p | cut -c 9- | sed 's/"//g' | sed 's/\\//g')
 echo $TEXT
 echo $TEXT | xclip -selection c
-</pre>
+````

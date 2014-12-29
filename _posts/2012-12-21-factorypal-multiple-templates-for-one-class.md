@@ -21,8 +21,8 @@ I&#8217;ve working on improving FactoryPal. For those of you that don&#8217;t kn
 
 The new feature that I&#8217;ve added is the ability to create multiple templates for one class. Before this, you could only create one per class. So, let&#8217;s see how it&#8217;s done and compare them:
 
-<noscript>
-  <pre><code class="language-scala scala">//Default template creation
+````scala
+//Default template creation
 FactoryPal.register[Person]() { person =&gt;
     person.name.mapsTo("gonto") and
     person.age.isRandom
@@ -32,20 +32,21 @@ FactoryPal.register[Person]() { person =&gt;
 FactoryPal.register[Person](Some('coolPerson)) { person =&gt;
     person.name.mapsTo("cool") and
     person.age.isRandom
-}</code></pre>
-</noscript>
+}
+````
 
 The result of running this code would be to have two templates for Person. The default one and a cool one ;).
 
 And, let&#8217;s use both them!
 
-<noscript>
-  <pre><code class="language-scala scala">//Create a person from default template
+````scala
+//Create a person from default template
 val person = FactoryPal.create[Person]
 
 //Creating a Person for cool template
 val person = FactoryPal.create[Person](Some('coolPerson))()</code></pre>
-</noscript>
+````
+
 
 Pretty neat, huh?
 

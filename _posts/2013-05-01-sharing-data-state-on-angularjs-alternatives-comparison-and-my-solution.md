@@ -29,8 +29,8 @@ Let&#8217;s first state all of the options:
 
 **1) We can use Models as a service.** What does this mean? We create a service that will actually be a model. This &#8220;service&#8221; will have state and data. So, each time we need to use this model, we just import it in the controller or in the directive and we use it to set or get values. But what about being notified? We can actually assign this &#8220;service&#8221; to a scope variable in the first line of our controller and then use the *$watch* method from the scope to see if it has changed. For example:
 
-<noscript>
-  <pre><code class="language-javascript javascript">angular.module("test").service("Greeting", function() {
+````js
+angular.module("test").service("Greeting", function() {
   this.greet = null;
   
   this.greetTo = function(name) {
@@ -46,8 +46,8 @@ angular.module("test").controller("TestCtrl", function(Greeting) {
   });
   
   $scope.greeting.greetTo("Gonto");
-});</code></pre>
-</noscript>
+});
+````
 
 **2) Using ng-include. **Using ng-include, we can include some other piece of HTML. This HTML will have a new scope (ng-include does this) and will create a controller for it. So, we&#8217;ll have a Controller inheritance with ng-include. $scope is inherited as well (It uses prototypal inheritance), so when you call something in the child controller&#8217;s scope, if it&#8217;s not there, it&#8217;ll go look to the parent. We can get notified of changes using $watch as well.
 

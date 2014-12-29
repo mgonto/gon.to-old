@@ -40,10 +40,11 @@ Este plugin se basa en SVG para hacer los dibujos tanto en Firefox como Chrome. 
 
 Un ejemplo muy basico de como usarlo seria
 
-<pre>var canvas = Raphael(holder, 50, 50);
+````js
+var canvas = Raphael(holder, 50, 50);
 
 var circle = paper.circle(50, 40, 10);
-</pre>
+````
 
 Esto lo que hace es crea primero un &#8220;canvas&#8221; de 50&#215;50 en aquel elemento del dom HTML cuyo id sea holder. Dentro de este bloque de 50&#215;50 es donde vamos a trabajar.  
 Lo que hace luego es dibujar un circulo con x=50 y=40 y radio 10.

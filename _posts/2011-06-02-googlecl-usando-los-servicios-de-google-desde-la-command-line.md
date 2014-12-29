@@ -49,7 +49,8 @@ Como tip extra, utilizando googlecl hay un launcher para Unity que vos le arrast
 
 Para bajarlo debemos correr lo siguiente:
 
-<pre lang="bash">sudo apt-get install zenity
+````bash
+sudo apt-get install zenity
 cd Downloads/
 wget http://webupd8.googlecode.com/files/gdocs-unity.tar.gz
 tar -xvf gdocs-unity.tar.gz
@@ -58,7 +59,7 @@ mv gdocs-unity/docs-128.png ~/.icons/
 chmod +x ~/Downloads/gdocs-unity/docsHelper
 sed -i "s/Exec=\/path\/to\/docsHelper/Exec\=\/home\/$USER\/Downloads\/gdocs-unity\/docsHelper/" ~/.local/share/applications/gdocs.desktop
 rm gdocs-unity.tar.gz
-</pre>
+````
 
 Antes de poder usarlo deberan dar acceso a GDocs. Para eso desde la consola le damos google docs upload y ahi nos va a pedir acceso a nuestra google account la primera vez!
 

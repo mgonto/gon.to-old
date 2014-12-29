@@ -6,10 +6,10 @@ baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
 url: "http://mgonto.github.io" # the base hostname & protocol for your site
 twitter_username: mgonto
 github_username:  mgonto
-highlighter: pygments
 excerpt_separator: '<!-- more -->'
 
 
 # Build settings
 markdown: rdiscount
 permalink: pretty
+highlighter: pygments

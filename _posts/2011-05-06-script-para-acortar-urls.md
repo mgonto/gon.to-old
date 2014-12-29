@@ -31,7 +31,8 @@ Los campos a reemplazar son TU\_USUARIO y TU\_KEY.
 Basicamente lo que hace es primero utilizar una libreria de python para encodear la URL ya que la API REST de bit.ly usa URL encodeadas. Luego con Curl le pegamos a bit.ly y despues mediante sed y awk obtenemos la url :).  
 Aqui les va el script <img src="http://gon.to/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" /> y happy shortening <img src="http://gon.to/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" /> 
 
-<pre lang="bash">#!/bin/bash
+````bash
+#!/bin/bash
 progname=$(basename $0)
 if [ -z "$1" ]
 then
@@ -44,4 +45,4 @@ BITLYURL='http://api.bit.ly/v3/shorten?login=TU_USUARIO&#038;apiKey=TU_KEY&#038;
 ENCODEDURL=$(python -c "import urllib; print urllib.quote('''$URL''')")
 RESPONSE=$(/usr/bin/env curl -s -A Mozilla $BITLYURL'&#038;longUrl='$ENCODEDURL)
 echo $RESPONSE | sed -e 's/[{}]/''/g' | awk -v k="text" '{n=split($0,a,","); for (i=1; i&lt;=n; i++) print a[i]}' | sed -n 4p | cut -c 9- | sed 's/"//g' | sed 's/\\//g'
-</pre>
+```

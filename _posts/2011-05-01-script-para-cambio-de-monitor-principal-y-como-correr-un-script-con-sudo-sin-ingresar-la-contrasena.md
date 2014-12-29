@@ -56,14 +56,17 @@ Ustedes se preguntaran porque ahi dice monch si yo dije que el script se llamaba
 
 Eso es porque yo no queria tener que poner sudo cada vez que queria correr este script. Entonces cree un script llamado swmon que lo que hace es:
 
-<pre lang="bash">#!/bin/bash
-sudo ~/bin/monch $@</pre>
+````bash
+#!/bin/bash
+sudo ~/bin/monch $@
+````
 
 Este script simplemente llama al script llamado monch con sudo y le pasa todos los parametros que recibo. Es una especie de proxy o decorator que simplemente llama al otro script agregandole la palabra sudo. Esto hara que se corra el script monch como super user SIN QUE NOS PIDA PASSWORD.
 
 Por ultimo, el script que tiene la papa es monch que es el siguiente:
 
-<pre lang="bash">#!/bin/bash
+````bash
+#!/bin/bash
 num=1
 if [ -z "$1" ]
 then

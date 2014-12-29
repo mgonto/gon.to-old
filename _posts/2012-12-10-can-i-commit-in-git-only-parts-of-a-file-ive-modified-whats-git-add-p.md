@@ -26,7 +26,8 @@ It has happen to me a lot of times that I&#8217;ve modified a lot of lines in a 
 
 So, let&#8217;s suppose I have a file with texts commited to the repo like the following:
 
-<pre>Line 1
+````
+Line 1
 Line 2
 Line 3
 Line 4
@@ -35,7 +36,8 @@ Line 6
 Line 7
 Line 8
 Line 9
-Line 10</pre>
+Line 10
+````
 
 So, I first modify the second line of the file and change &#8220;Line 2&#8243; to &#8220;Line 20&#8243;  
 Then, I modify the last line of the file to &#8220;Last line&#8221;

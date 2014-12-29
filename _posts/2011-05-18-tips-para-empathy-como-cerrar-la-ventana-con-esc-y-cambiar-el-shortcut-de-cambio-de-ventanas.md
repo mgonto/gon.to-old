@@ -47,7 +47,8 @@ Una vez abierto veran que es un XML comun y corriente con diversas acciones.
 
 Primero que nada van a buscar la siguiente linea:
 
-<pre lang="xml">&lt;/child>
+````xml
+&lt;/child>
         &lt;child>
           
           &lt;accelerator key="L" modifiers="GDK_CONTROL_MASK"/>
@@ -194,4 +195,4 @@ Primero que nada van a buscar la siguiente linea:
     &lt;/child>
   &lt;/object>
 &lt;/interface>
-</pre>
+````

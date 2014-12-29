@@ -36,30 +36,38 @@ Esto que quiere decir?
 
 Suponganse que tenemos los siguiente:
 
-<pre lang="ruby">class HelloString &lt; ActiveRecord::Base
+````ruby
+class HelloString &lt; ActiveRecord::Base
 
-end</pre>
+end
+````
 
 Y levantamos la consola de rails corriendo **rails console**. Ahora suponganse que corremos la siguiente linea:
 
-<pre lang="ruby">1.9.2p320 :003 &gt; HelloString.new.hello
+````ruby
+1.9.2p320 :003 &gt; HelloString.new.hello
 NoMethodError: undefined method `hello' for #
 	from (irb):3
 	from /home/gonto/.rvm/rubies/ruby-1.9.2-p320/bin/irb:16:in `'
-1.9.2p320 :004 &gt;</pre>
+1.9.2p320 :004 &gt;
+````
 
 Como vemos, nos tira un error diciendo que el metodo hello no existe. Ahora, editemos la clase anterior en Sublime Text 2 y pongamos:
 
-<pre lang="ruby">class HelloString &lt; ActiveRecord::Base
+````ruby
+class HelloString &lt; ActiveRecord::Base
   def hello
      "Hola Gonto"
   end
-end</pre>
+end
+````
 
 Ahora, corremos en la consola HelloString.new.hello y aun nos tirara la excepcion. Sin embargo, si ahora tocamos **reload!**, y luego corremos lo mismo que antes veremos:
 
-<pre lang="ruby">1.9.2p320 :009 &gt; HelloString.new.hello
+````ruby
+1.9.2p320 :009 &gt; HelloString.new.hello
  =&gt; "Hola Gonto"
-1.9.2p320 :010 &gt;</pre>
+1.9.2p320 :010 &gt;
+````
 
 Excelente, no?

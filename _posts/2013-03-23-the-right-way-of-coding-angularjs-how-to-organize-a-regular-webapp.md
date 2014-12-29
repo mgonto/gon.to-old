@@ -62,27 +62,27 @@ So, this example covers most of the different approaches and pages of a regular 
 
 &nbsp;
 
-<noscript>
-  <pre><code class="language-javascript javascript">var module = angular.module('basicsite', 
-  	['ngResource']).
-    config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.
-            when('/',
-            {templateUrl: '/js//views/main.html', controller: 'MainCtrl'}).
-            when('/sports',
-            {templateUrl: '/js/views/sports.html', controller: 'SportsCtrl'}).
-            when('/players',
-            {templateUrl: '/js/views/players.html', controller: 'PlayersCtrl'}).
-            otherwise({redirectTo: '/'});
-    }]);</code></pre>
-</noscript>
+````js
+var module = angular.module('basicsite', 
+['ngResource']).
+config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.
+        when('/',
+        {templateUrl: '/js//views/main.html', controller: 'MainCtrl'}).
+        when('/sports',
+        {templateUrl: '/js/views/sports.html', controller: 'SportsCtrl'}).
+        when('/players',
+        {templateUrl: '/js/views/players.html', controller: 'PlayersCtrl'}).
+        otherwise({redirectTo: '/'});
+}]);
+````
 
 &nbsp;
 
 2) Now, you have the main routes, templates and controllers defined. As you can see, Footer is used in several pages and is always the same. Header is used in several pages and is almost the same. It just changes if user is logged in or not. As we want to use the footer several times and we don&#8217;t want to define it so many times, we&#8217;re going to define a directive for it. This directive has its template and it can have a controller in case it needs it. Otherwise, we can just have a link method that will be run when added to other HTML.
 
-<noscript>
-  <pre><code class="language-javascript javascript">module.directive('footer', function () {
+````js
+module.directive('footer', function () {
     return {
         restrict: 'A', //This menas that it will be used as an attribute and NOT as an element. I don't like creating custom HTML elements
         replace: true,
@@ -91,21 +91,21 @@ So, this example covers most of the different approaches and pages of a regular 
             // Your behaviour goes here :)
         }]
     }
-});</code></pre>
-  
-  <pre><code class="language-html html">&lt;div&gt;
+});
+````
+````html  
+&lt;div&gt;
   &lt;p&gt;
     This is the footer. Yeah baby. Coyrhing and all of that!
   &lt;/p&gt;
-&lt;/div&gt;</code></pre>
-</noscript>
+&lt;/div&gt;
+````html
 
-&nbsp;
 
 3) Almost same things happen with Header. We&#8217;re going to use this in many places but it has some differences. For this cases, I use AngularUI ui-if directive which is awesome, as that&#8217;s exactly what we want. Depending on something we show one content or another. Check it out [clicking here][1]
 
-<noscript>
-  <pre><code class="language-javascript javascript">module.directive('header', function () {
+````js
+module.directive('header', function () {
     return {
         restrict: 'A', //This menas that it will be used as an attribute and NOT as an element. I don't like creating custom HTML elements
         replace: true,
@@ -115,9 +115,10 @@ So, this example covers most of the different approaches and pages of a regular 
             // Your behaviour goes here :)
         }]
     }
-});</code></pre>
-  
-  <pre><code class="language-html html">&lt;div&gt;
+});
+````
+````html
+&lt;div&gt;
   &lt;p&gt;
     This part of the hader is always here
   &lt;/p&gt;
@@ -127,8 +128,8 @@ So, this example covers most of the different approaches and pages of a regular 
   &lt;p ui-if="!user"&gt;
     Hey buddy, log in! Be cool
   &lt;/p&gt;
-&lt;/div&gt;</code></pre>
-</noscript>
+&lt;/div&gt;
+````
 
 Here, there are 2 important things to note. First the scope attribute, where we put user: &#8220;=&#8221;. What does this mean? This will add the user to out scope ($scope.user). It will create a bidirectional asociation with the value supplied in the HTML as a parameter. If the user doesn&#8217;t put anything, it will be asumed that the name of the parent scope variable is user (Don&#8217;t do this, it&#8217;s impossible to understand :)). What does this mean in english?
 
@@ -138,8 +139,8 @@ If you put <div header user=&#8221;userModel&#8221;> in the template HTML for t
 
 &nbsp;
 
-<noscript>
-  <pre><code class="language-html html">&lt;div&gt;
+````html
+&lt;div&gt;
   &lt;div header&gt;&lt;/div&gt;
   
   &lt;div class="main-content"&gt;
@@ -149,9 +150,11 @@ If you put <div header user=&#8221;userModel&#8221;> in the template HTML for t
   &lt;/div&gt;
   
   &lt;div footer&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-  
-  <pre><code class="language-html html">&lt;div&gt;
+&lt;/div&gt;
+````
+
+````html
+&lt;div&gt;
   &lt;div header user="player"&gt;&lt;/div&gt;
   
   &lt;div class="main-content"&gt;
@@ -161,9 +164,11 @@ If you put <div header user=&#8221;userModel&#8221;> in the template HTML for t
   &lt;/div&gt;
   
   &lt;div footer&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+````
   
-  <pre><code class="language-html html">&lt;div&gt;
+````html
+&lt;div&gt;
   &lt;div header user="userModel"&gt;&lt;/div&gt;
   
   &lt;div class="main-content"&gt;
@@ -172,8 +177,8 @@ If you put <div header user=&#8221;userModel&#8221;> in the template HTML for t
     &lt;/p&gt;
   &lt;/div&gt;
   
-&lt;/div&gt;</code></pre>
-</noscript>
+&lt;/div&gt;
+````
 
 And we finished. We&#8217;ve an app up and running with a header, a footer and specific content for each page. Now, every time we add a page, all we need to do is just create the controller, create the template and add the header and footer if needed and that&#8217;s it.
 

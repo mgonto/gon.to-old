@@ -31,17 +31,20 @@ So, let&#8217;s see first how it&#8217;s implemented. Every Driver (H2, Postgres
 
 So, the first thing I implemented was a Trait Profile with an abstract Extended Profile value:
 
-<pre>package models
+````scala
+package models
 
 import slick.driver.ExtendedProfile
 
 trait Profile {
   val profile: ExtendedProfile
-}</pre>
+}
+````
 
 After this, I needed to create the Users table. That Users table needed the profile, so I&#8217;d createa UserModule which would need the Profile trait. Then, as I&#8217;d mix with a Profile trait, I&#8217;d import the things from the abstract ExtendedProfile field and everything would compile. Then I create the users table with an ID and a Name (pretty simple)
 
-<pre>package models
+````scala
+package models
 
 case class User(id: Option[Int], name : String)
 
@@ -67,11 +70,13 @@ trait UserComponent {
     }
 
   }
-}</pre>
+}
+````
 
 After this, I create a DataAccessLayer class (DAL) which would receive the ExtendedProfile as a constructor parameter and then would include the other traits (Profile and UserModule)
 
-<pre>package models
+````scala
+package models
 
 import slick.driver.ExtendedProfile
 
@@ -82,15 +87,17 @@ class DAL(override val profile: ExtendedProfile) extends UserComponent with Prof
   def create(implicit session: Session): Unit = {
     Users.ddl.create //helper method to create all tables
   }
-}</pre>
+}
+````
 
 After this, I have everything to create a DAL from a given profile. However, now I needed a way to configure the profile, so I added a new property in the application.conf.
 
-<pre>slick.db.driver=scala.slick.driver.H2Driver</pre>
+`slick.db.driver=scala.slick.driver.H2Driver`
 
 Then, I created a trait that would import this driver from the conf and create the database to do the queries and the dal with the corresponding profile. It has two methods, getDb and getDal which will be then used by two other classes.
 
-<pre>package models
+````scala
+package models
 
 import slick.session.Database
 import play.api.db.DB
@@ -115,11 +122,13 @@ trait DBeable {
   private def singleton[T](name : String)(implicit man: Manifest[T]) : T =
     Class.forName(name + "$").getField("MODULE$").get(man.runtimeClass).asInstanceOf[T]
 
-}</pre>
+}
+````
 
 The only things left are creating the DB once the app starts and having a singleton object to be able to ask for the dal and the database to do the queries from a controller. This is done as following:
 
-<pre>import models.{User, DBeable, AppDB}
+````scala
+import models.{User, DBeable, AppDB}
 import play.api.db.DB
 import play.api.GlobalSettings
 import play.api.Application
@@ -136,20 +145,24 @@ object Global extends GlobalSettings with DBeable{
         dal.create
     }
   }
-}</pre>
+}
+````
 
-<pre>package models
+````scala
+package models
 import play.api.Play.current
 object AppDB extends DBeable {
 
   lazy val database = getDb
   lazy val dal = getDal
 
-}</pre>
+}
+````
 
 And that&#8217;s it :). Now you have everything configured to start coding. I&#8217;ve tried if everything was working with a test as following.
 
-<pre>class UserSpec extends Specification {
+````scala
+class UserSpec extends Specification {
 
   "User" should {
 
@@ -165,7 +178,8 @@ And that&#8217;s it :). Now you have everything configured to start coding. I&#8
       }
     }
   }
-}</pre>
+}
+````
 
 And that&#8217;s it <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Now you have Play! configured for running with Slick.
 

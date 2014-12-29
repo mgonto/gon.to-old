@@ -22,8 +22,8 @@ Just a quick post to let everyone know that FactoryPal&#8217;s 0.2 version for S
 
 In order to use this, just update the version of FactoryPal to 0.2 and your version of Scala. This is an example build.scala
 
-<noscript>
-  <pre><code class="language-scala scala">import sbt._
+````scala
+import sbt._
 import sbt.Keys._
 
 object ApplicationBuild extends Build {
@@ -51,7 +51,6 @@ object ApplicationBuild extends Build {
     )
   )
 }
-</code></pre>
-</noscript>
+````
 
 **If you want to know what is FactoryPal or you want to get more information about it please visit <https://github.com/mgonto/factory_pal> and check the README.**

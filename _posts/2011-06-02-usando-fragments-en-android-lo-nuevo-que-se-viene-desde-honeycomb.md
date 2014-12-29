@@ -56,24 +56,26 @@ OnPause y OnResume se utilizan para guardar y obtener estado del Fragment en cas
 
 Luego desde el Layout de la Activity que tendra un cierto Fragment se usara:
 
-<pre lang="xml">&lt;fragment android:name="com.example.news.ArticleListFragment"
+````xml
+&lt;fragment android:name="com.example.news.ArticleListFragment"
             android:id="@+id/list"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
-</pre>
+````
 
 Siguiendo el ejemplo que hablabamos antes, suponganse que yo de la lista primero veo el detalle de el celular Motorola Atrix 4G y luego el del iPhone. **Yo quiero que al tocar Back estando en el detalle del iPhone me muestre el detalle del Motorola, no quiero que me vaya a la activity anterior. Como hacemos esto?**  
 Lo que tenemos que hacer es justamente agregar los distintos fragments al Activity Stack de la task que estamos ejecutando. Esto se hace realizando el cambio de Fragment mediante el uso de una FragmentTransaction.  
 Un ejemplo es el siguiente
 
-<pre lang="java">Fragment newFragment = new ExampleFragment();
+````java
+Fragment newFragment = new ExampleFragment();
 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 transaction.replace(R.id.fragment_container, newFragment);
 // La siguiente linea LO agrego al BackStack. Es de especial importancia
 transaction.addToBackStack(null);
 transaction.commit();
-</pre>
+````
 
 Este fue un mini repaso de Fragment que es lo que se viene con mucha fuerza en las nuevas versiones de Android.  
 Como dice Lionel de Nivel X: Espero que les haya gustado&#8230;&#8230;&#8230;. CHAU

@@ -136,7 +136,7 @@ $scope.account = account.get({single: true});
 
 // POST /accounts/123/messages?param=myParam with the body of name: "My Message"
 account.customPOST("messages", {param: "myParam"}, {}, {name: "My Message"})
-```
+````
 
 That&#8217;s it <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Please tell me what you guys think! If you want to read more about Restangular [You can click here to check it out][2].
 

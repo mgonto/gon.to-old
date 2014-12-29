@@ -43,8 +43,8 @@ So, what do you need to do
 
 4) After this, we have everything configured to start working. Grunt also supports adding some plugins to run some cool tasks. Those plugins will be downloaded for this specific case. For that, we can create a *package.json* and npm will then take care of installing all of this plugins when running npm install. So, create a package.json like this:
 
-<noscript>
-  <pre><code class="language-json json">{
+````js
+{
   "name": "restangular",
   "description": "Restfull Resources service for AngularJS apps",
   "version": "0.5.3",
@@ -57,15 +57,15 @@ So, what do you need to do
     "grunt-bower": "*",
     "grunt-bower-task": "*",
   }
-}</code></pre>
-</noscript>
+}
+````
 
 Take a special look into the devDependencies. In there, we&#8217;re stating that we need 2 bower plugins that we&#8217;ll use later.
 
 5) Create your *bower.json *with the dependencies you need. You can either create one similar to the next one or running *bower init* to follow some guide to create it:
 
-<noscript>
-  <pre><code class="language-json json">{
+````js
+{
   "name": "restangular",
   "version": "0.5.3",
   "main": "./dist/restangular.min.js",
@@ -84,8 +84,8 @@ Take a special look into the devDependencies. In there, we&#8217;re stating that
     "components",
     "lib"
   ]
-}</code></pre>
-</noscript>
+}
+````
 
 6) Now, we have everything we need to start creating our *Gruntfile.js*. This file is the one read when running grunt in that directory. Check this Gruntfile. I&#8217;ll explain it below <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> *  
 *

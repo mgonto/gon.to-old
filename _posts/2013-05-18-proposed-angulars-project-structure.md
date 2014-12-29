@@ -37,8 +37,8 @@ If we were to use events, we wouldn&#8217;t have this bidirectional binding, whi
 Let&#8217;s view an example of an app with this configuration.  
 First, the main HTML will look something like this:
 
-<noscript>
-  <pre><code class="language-html html">&lt;html&gt;
+````html
+&lt;html&gt;
   &lt;head&gt;
     &lt;!-- Include here Styles and AngularJS scripts--&gt;
   &lt;/head&gt;
@@ -54,15 +54,15 @@ First, the main HTML will look something like this:
     &lt;/div&gt;
     
   &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</noscript>
+&lt;/html&gt;
+````
 
 In here you can see we define the MainCtrl and then we define the ng-view to be used with the RouteProvider
 
 Now, let&#8217;s see the app.js the app definition:
 
-<noscript>
-  <pre><code class="language-javascript javascript">'use strict';
+````js
+'use strict';
 
 /**
 * Application start point.
@@ -91,25 +91,24 @@ var module = angular.module('example',
     
   $locationProvider.html5Mode(true);
 } ]);
-</code></pre>
-</noscript>
+````
 
 Here we define for each URL the HTML to be used and the template for that URL.  
 We then must define all of this controllers remembering that all we set in the MainCtrl will be visible in the rest.  
 Now, let&#8217;s see an example of a directive, in the firstTab.html we have the following:
 
-<noscript>
-  <pre><code class="language-html html">&lt;div&gt;
+````html
+&lt;div&gt;
   &lt;h1&gt;First Tab&lt;/h1&gt;
   &lt;input type="text" ng-model="query.searchText" /&gt;
   &lt;pie data="data.valuesData | forPie" type="valuesPie" /&gt;
-&lt;/div&gt;</code></pre>
-</noscript>
+&lt;/div&gt;
+````
 
 The first tab controller changes the searchText property of the query model. The query model is inherited from the MainCtrl. The MainCtrl is watching this query object for changes. Once it changes, it fetches some information from the server, and sets that in the valuesData property of the data model. This \`data.valuesData\` is being sent as a parameter to the pie directive, so as soon as it changes, the directive will be watching it. Let&#8217;s see the code of the directive.
 
-<noscript>
-  <pre><code class="language-javascript javascript">module.directive('pie', function () {
+````js
+module.directive('pie', function () {
   return {
     replace: true,
     restrict: 'EA',
@@ -127,8 +126,8 @@ The first tab controller changes the searchText property of the query model. The
       });
     }]
   }
-});</code></pre>
-</noscript>
+});
+````
 
 In here we define an isolated scope. We set that the data HTML attribute will actually contain a scope variable name and that it&#8217;ll create a bidirectional asociation with it. This way, we can actually use a model from the parent scope, without inehriting the whole scope. Then, we set that the \`type\` attribute is just a string to be set in our current scope.  
 Then, we watch the data for changes. If it changes and it&#8217;s either undefined or it has no data, we hide the pie element. Otherwise, we show it and we plot it using the data.

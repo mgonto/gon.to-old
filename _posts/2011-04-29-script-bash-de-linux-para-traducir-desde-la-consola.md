@@ -30,7 +30,8 @@ Este script usa las APIs REST de Google tanto de traduccion de un idioma a otro,
 
 Usamos CURL para pegarle a los servicios y sed + cut para obtener del JSon devuelto el campo que queremos.
 
-<pre lang="bash">#!/usr/bin/env bash
+````bash
+#!/usr/bin/env bash
 progname=$(basename $0)
 
 if [ -z "$2" ]
@@ -62,4 +63,4 @@ $TRANSURL'&langpair='$LANGPAIR'&q='$PSTRING)
 echo -n "$progname&gt; "
 # Parse and clean response, to show only translation.
 echo "$RESPONSE" |cut -d ':' -f 3 |cut -d '}' -f 1
-</pre>
+````

@@ -33,12 +33,12 @@ Have you ever heard of [factory_girl][1] a super cool Ruby framework? Well, Fact
 
 FactoryPal is a singleton object where you can register all of the templates. For example, you can define a template as follows:
 
-<noscript>
-  <pre><code class="language-scala scala">FactoryPal.register[Person]() { person =&gt;
+````scala
+FactoryPal.register[Person]() { person =&gt;
     person.name.mapsTo("gonto") and
     person.age.isRandom
-}</code></pre>
-</noscript>
+}
+````
 
 In this example, we register a new template for class model. If we try to set a value for a property that Person doesn&#8217;t has, your project won&#8217;t compile. If you try to set a value to a property that isn&#8217;t the type of that property, the project won&#8217;t compile either. Pretty cool huh? This was possible thanks to Scala Macros and Dynamic, two features added in the latest Scala 2.10 RC release.
 
@@ -50,18 +50,17 @@ For the time being, there are 3 supported operations on a field template.
 
 After we created the template, we can instantiate objects of that template as follows:
 
-<noscript>
-  <pre><code class="language-scala scala">val person = FactoryPal.create[Person]</code></pre>
-</noscript>
+````scala
+al person = FactoryPal.create[Person]
+````
 
 The create method has another overload that lets you add some field overriders for certain test. For example you can do the following:
 
-<noscript>
-  <pre><code class="language-scala scala">val person = FactoryPal.create[Person]() { (person : ObjectBuilder[Person]) =&gt;
+````scala
+val person = FactoryPal.create[Person]() { (person : ObjectBuilder[Person]) =&gt;
     person.age.mapsTo(45) alone
 }
-</code></pre>
-</noscript>
+````
 
 And that&#8217;s it. That&#8217;s all you need to know to use this.
 
@@ -69,8 +68,8 @@ And that&#8217;s it. That&#8217;s all you need to know to use this.
 
 This is an example configuration for Build.scala for your SBT project :). There&#8217;re only snapshots for now as Scala 2.10 is not yet final. Once it&#8217;s, I&#8217;m going to make a release.
 
-<noscript>
-  <pre><code class="language-scala scala">import sbt._
+````scala
+import sbt._
 import sbt.Keys._
 
 object ApplicationBuild extends Build {
@@ -97,8 +96,8 @@ object ApplicationBuild extends Build {
       )
     )
   )
-}</code></pre>
-</noscript>
+}
+````
 
 Take a look at the dependency and the repository!
 
