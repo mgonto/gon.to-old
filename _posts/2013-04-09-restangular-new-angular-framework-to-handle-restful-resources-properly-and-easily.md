@@ -39,7 +39,7 @@ We&#8217;re used to creating REST APIs using Resources in our BackEnd. However, 
 
 In order to add this, you must download restangular.js [from here][1] and then link to it in your HTML file. **Restangular depends only on angular, angular-resource and underscore.** After this, you must just declare the dependency to your app.
 
-````js
+~~~js
 var app = angular.module('angularjs-starter', ['restangular']);
 
 // Using RestangularProvider we can configure properties. To check all properties go to https://github.com/mgonto/restangular
@@ -51,7 +51,7 @@ app.config(function(RestangularProvider) {
 angular.module('angularjs-starter').controller('NewCtrl', function($scope, Restangular) {
   // My controller
 });
-````
+~~~
 
 **Let&#8217;s start using it!!!**
 

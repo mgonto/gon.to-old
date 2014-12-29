@@ -10,6 +10,6 @@ excerpt_separator: '<!-- more -->'
 
 
 # Build settings
-markdown: rdiscount
+markdown: redcarpet
 permalink: pretty
 highlighter: pygments
