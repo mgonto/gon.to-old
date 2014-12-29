@@ -6,10 +6,11 @@
     {% endif %}
     <div class="labels">{{include.item.labels | join: ","}}</div>
     {% if included.item.forks %}
-      <div class="forks">{{include.items.forks}}</div>
+      <div class="forks">{{include.item.forks}}</div>
     {% endif %}
     {% if included.item.stars %}
-      <div class="stars">{{include.items.stars}}</div>
+      <div class="stars">{{include.item.stars}}</div>
     {% endif %}
+    <a href="{{include.item.link}}">{{include.item.linkText}}</a>
 
 </div>

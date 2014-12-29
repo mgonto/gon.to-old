@@ -1,6 +1,23 @@
+- title: 'Death to cookies, long live JSON Web Tokens'
+  conference: "ngEurope & DevoxxBE"
+  description: >
+    A talk about a newer aproach to handling authentication with Single Page Apps:
+    Using JSON Web Tokens instead of cookies
+  date: October/November 2014
+  labels:
+    - jwt
+    - authentication
+    - security
+    - spa
+    - cookies
+    - tokens
+  link: 'https://www.youtube.com/watch?v=lDb_GANDR8U&list=UUEGUP3TJJfMsEM_1y8iviSQ'
+  linkText: 'View the talk online'
+
 - title:  'Restangular 2.0: The future and beyond'
   description: >
     A talk about what to expect from the upcoming version of Restangular.
+  conference: DevoxxFR
   labels:
     - restangular
     - prototype
@@ -9,6 +26,7 @@
     - beyond angular
   link: https://www.youtube.com/watch?v=fWar75R1NGo
   date: October 2014
+  linkText: 'View the talk online'
 
 
 - title: Reactive Angular
@@ -23,3 +41,50 @@
     - subject
     - stream
   link: https://www.parleys.com/play/53677646e4b0593229b85841/chapter1/about
+  linkText: 'View the talk online'
+
+
+- title: Models and Rest APIs on AngularJS with Restangular
+  conference: DevoxxFR
+  description: >
+    A talk about a nice aproach to handling models with both state and behaviour
+    in your AngularJS apps
+  date: April 2014
+  labels:
+    - models
+    - state
+    - behaviour
+    - restangular
+    - angularjs
+  link: https://www.parleys.com/play/535a189ee4b0c5ba17d43455/chapter1/about
+  linkText: 'View the talk online'
+
+
+- title: 'Play! Framework: A KISS Framework'
+  conference: Play Meetup
+  description: >
+    An Introduction to Play Framework showing its advantages and disadvantages against other MVC libraries.
+  date: May 2012
+  labels:
+    - mvc
+    - server
+    - backend
+    - play
+    - java
+  link: http://vimeo.com/38604912
+  linkText: 'View the talk online'
+
+- title: 'Stop wasting developers time! How to write good documentation?'
+  conference: ForwardJS
+  description: >
+    A talk about my experience creating Auth0's documentation and some very
+    useful tips and things every documentation aimed for developers should have.
+  date: February 2015
+  future: true
+  labels:
+    - documentation
+    - developers
+    - tips
+    - developer product
+  link: 'http://forwardjs.com/'
+  linkText: 'View the conference page'
