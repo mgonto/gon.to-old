@@ -94,3 +94,49 @@
     - developer product
   link: 'http://forwardjs.com/'
   linkText: 'View the conference page'
+
+- title: 'AngularJS 101: From n00b to ngExpert'
+  conference: ForwardJS
+  description: >
+    A full day workshop that will teach you all you need to get started
+    with AngularJS!
+  date: February 2015
+  future: true
+  type: workshop
+  labels:
+    - angularjs
+    - directives
+    - declarative
+    - databinding
+  link: 'http://forwardjs.com/'
+  linkText: 'Buy the tickets!'
+
+- title: 'Make your SPA a maximum security prison'
+  conference: ConFoo
+  description: >
+    Learn how to implement your SPAs security with this live coding talk!
+  date: February 2015
+  future: true
+  type: talk
+  labels:
+    - angularjs
+    - authentication
+    - jwt
+    - live-coding
+  link: 'http://confoo.ca/en/speaker/martin-gontovnikas'
+  linkText: 'View the conference page'
+
+- title: 'Reactive all the things'
+  conference: ngConf
+  description: >
+    In this talk we'll learn how to leverage Reactive Programming to
+    make performant, scalable and loosely coupled apps
+  date: March 2015
+  future: true
+  type: talk
+  labels:
+    - angularjs
+    - reactive
+    - observables
+  link: 'http://www.ng-conf.org/'
+  linkText: 'View the conference page'
