@@ -9,7 +9,11 @@
     display: inline-block;
     text-decoration: none;
     padding: 10px 20px;
+    background-color: lighten($black, 50);
     transition: 0.25s;
+    &:hover {
+        background-color: lighten($black, 55);    
+    }
 
     &.primary {
         background-color: darken($blue, 15);

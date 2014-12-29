@@ -4,12 +4,12 @@
     {% if included.item.date %}
       <div class="date">{{include.item.date}}</div>
     {% endif %}
-    <div class="labels">{{include.item.labels | join: ","}}</div>
+    <div class="labels">{{include.item.labels | join: ", "}}</div>
     {% if included.item.forks %}
       <div class="forks">{{include.item.forks}}</div>
     {% endif %}
     {% if included.item.stars %}
       <div class="stars">{{include.item.stars}}</div>
     {% endif %}
-    <a href="{{include.item.link}}">{{include.item.linkText}}</a>
+    <a class="btn" href="{{include.item.link}}">{{include.item.linkText}}</a>
 </div>

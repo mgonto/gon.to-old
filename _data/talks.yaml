@@ -5,7 +5,7 @@
     Using JSON Web Tokens instead of cookies
   date: October/November 2014
   labels:
-    - jwt
+    - jwt 
     - authentication
     - security
     - spa

@@ -2,12 +2,15 @@
  * Site header
  */
 .site-header {
-    /* border-top: 5px solid \$grey-color-dark;
-    border-bottom: 1px solid \$grey-color-light; */
     min-height: 56px;
-
+    background-color: $blue;
+    color: $white;
     // Positioning context for the mobile navigation icon
     position: relative;
+    transition: 0.25s;
+    &.scroll {
+        background-color: rgba($blue, .5);
+    }
 }
 
 .site-title {
@@ -16,10 +19,12 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    color: $white;
+    text-decoration: none;
 
     &,
     &:visited {
-        /* color: \$grey-color-dark; */
+        color: $white;
     }
 }
 
@@ -32,8 +37,8 @@
     }
 
     .page-link {
-        /* color: \$text-color;
-        line-height: \$base-line-height; */
+        color: $white;
+        text-decoration: none;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
