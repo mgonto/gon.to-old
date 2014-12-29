@@ -104,19 +104,21 @@ layout: default
           <div class="row">
               <div class="column-2-3">
                   <h2 class="blue">HIRE ME!</h2>
-                  <form action="">
+                  <form accept-charset="UTF-8" action="https://getsimpleform.com/messages?form_api_token=b2ab5448cbb6cba0ab152e3e3950f874" method="POST">
+                      <input type="hidden" name="utf8" value="✓">
                       <div>
                           <label for="">Your name *</label>
-                          <input type="text" placeholder="name">
+                          <input required="required" type="text" placeholder="name" name="name">
                       </div>
                       <div>
                           <label for="">Your email *</label>
-                          <input type="text" placeholder="email">
+                          <input required="required" type="text" placeholder="email" name="email">
                       </div>
                       <div>
-                          <label for="">Your name *</label>
-                          <textarea name="" id="" cols="30" rows="10"></textarea>
+                          <label for="">Your message *</label>
+                          <textarea required="required" cols="30" rows="10" name="content"></textarea>
                       </div>
+                      <input type="submit" />
                   </form>
 
               </div>
