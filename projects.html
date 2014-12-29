@@ -1,0 +1,13 @@
+---
+layout: grid
+---
+<div class="filterer">
+  <button>All</button>
+  <button data-type="talk">Talks</button>
+  <button data-type="workshop">Workshops</button>
+</div>
+<div class="cards-container">
+  {% for talk in site.data.talks %}
+    {% include grid-item.html item=talk %}
+  {% endfor %}
+</div>
