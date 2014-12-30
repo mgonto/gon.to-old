@@ -28,3 +28,14 @@
         }
     }
 }
+
+.roboto {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    &.light {
+        font-weight: 300;
+    }
+    &.bold {
+        font-weight: 700;   
+    }
+}
