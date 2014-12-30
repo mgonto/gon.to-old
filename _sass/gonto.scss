@@ -1,9 +1,4 @@
-body {
-    font-family: $base-font-family;
-    font-weight: 300;
-    -webkit-text-size-adjust: 100%;
-}
-
+/* home */
 .image {
     height: 90vh;
     overflow: hidden;
@@ -26,11 +21,42 @@ body {
 
 .projects {
     background-color: #777;
+    a {
+        color: $white;
+        &:hover {
+            color: $orange;
+        }
+    }
 }
 
 .talks {
     background-color: $blue;
 }
+
+.contact {
+    form {
+        label,
+        input:not([type^="submit"]),
+        textarea {
+            display: block;
+            font-family: Open Sans;
+            width: 100%;
+            max-width: 600px;
+            font-size: 16px;
+        }
+        label {
+            line-height: 26px;
+            margin: 10px 0 5px;
+        }
+        input:not([type^="submit"]),
+        textarea {
+            padding: 8px;
+            height: auto;
+            border: 1px solid #999;
+        }
+    }
+}
+
 
 /* grid styles */
 .grid {
