@@ -18,6 +18,7 @@ tags:
   - pageview
   - spa
   - track
+
 ---
 **<a href="https://github.com/mgonto/angularytics" target="_blank">TL;DR: Check out the Angularytics GitHub repo and quick bootstrap here</a>**
 
@@ -29,15 +30,7 @@ Hey,
 
 **In order to configure this to automatically track page views, all you need to do is the following:**
 
-````js
-angular.module('sample-app', ['angularytics'])
-  .config(function(AngularyticsProvider) {
-    AngularyticsProvider.setEventHandlers(['Console', 'Google']);
-  })
-  .run(function(Angularytics) {
-    Angularytics.init();
-  });
-````
+<script src="https://gist.github.com/mgonto/5703159.js"></script>
 
 **Withi this, every time the URL changes in your SPA, Google is going to track this page view. Just 5 lines of code and you have this working in your SPA.**
 
@@ -45,24 +38,13 @@ angular.module('sample-app', ['angularytics'])
 
 **Let&#8217;s see how we can use the filter**. Imagine we want to track an event when a user clicks on certain button that actually calls a function in the scope.
 
-````html
-&lt;label&gt;Click here to submit buddy&lt;/label&gt;
-
-&lt;input type="submit" 
-  ng-click="doSomething() | trackEvent:'Home Category':'Button clicked'" /&gt;</code></pre>
-````
+<script src="https://gist.github.com/mgonto/5703172.js"></script>
 
 Pretty easy, right?
 
 Now, let&#8217;s see how we can do this in a service:
 
-````js
-angular.controller('MainCtrl', function(Angularytics, $scope) {
-    $scope.click = function() {
-        Angularytics.trackEvent("Home Category", "Button clicked");
-    }
-})
-````
+<script src="https://gist.github.com/mgonto/5703189.js"></script>
 
 This is it :). **What do you think about this? I&#8217;d love your feedback :).**
 
