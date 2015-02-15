@@ -1,0 +1,11 @@
+#footer {
+  background: darken($hero, 3%);
+  .wrapper {
+    @include display-flex;
+    @include flex-props(row nowrap, space-between, flex-start, flex-start);
+  } 
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+}

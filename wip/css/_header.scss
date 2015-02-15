@@ -1,0 +1,35 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+  z-index: 100;
+
+  .wrapper {
+    @include display-flex;
+    @include flex-props(row nowrap, space-between, center, center);
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+
+    &.btn-cta {
+      margin: 0 0 0 15px;
+    }
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+
+    > a { padding: 10px 15px; }
+  }
+
+  h1 {
+
+  }
+}

@@ -1,0 +1,31 @@
+@media (min-width: 1200px) {
+ .wrapper { width: 1200px; }
+}
+
+@media (max-width: 1020px) {
+  .wrapper { width: 960px; }
+}
+
+@media (max-width: 961px) {
+  .wrapper { 
+    width: 100%;
+    padding: 0 20px;
+    display: block !important;
+  }
+  .content, section header {
+    width: 100% !important;
+  }
+  section header {
+    text-align: center !important;
+  }
+  #projects header .btn-cta { display: none; }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h3 + p {
+    font-size: 1.2em;
+    margin: 5px 0 70px;
+  }
+}

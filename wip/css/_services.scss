@@ -1,0 +1,39 @@
+#services {
+  .wrapper {
+    @include display-flex;
+    @include flex-props(row nowrap, space-between, flex-start, flex-start);
+  }
+
+  .content {
+    text-align: left;
+    width: 50%;
+
+    h3 {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    h3 + p {
+      font-size: 1em;
+      opacity: .7;
+      margin: 0;
+
+      &:after { display: none; }
+    }
+  }
+
+  article {
+    margin-bottom:50px;
+    &:last-child { margin-bottom: 0; }
+  }
+
+  a.toggle-contact {
+    color: #fff;
+    text-decoration: none;
+    background: $cta;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+}
