@@ -1,5 +1,5 @@
 # Site settings
-title: 'Resume | Martin Gontovnikas: Freelance Software Architect'
+title: 'Martin Gontovnikas'
 email: martin@gon.to
 description: 'This is the Resume and Portfolio of Martin Gontovnikas (@mgonto): A software engineer currently working with Javascript, Node, AngularJS, Scala and Akka.'
 baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
