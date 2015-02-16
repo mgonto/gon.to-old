@@ -46,6 +46,8 @@
     background-image:      -o-linear-gradient(top, #fff, rgba(255,255,255,0));
     background-image:         linear-gradient(top, #fff, rgba(255,255,255,0));
 
+    a:not(.btn-cta) { color: $hero; }
+
     &:before {
       content: "";
       height: 100%;
@@ -73,6 +75,8 @@
     &.btn-cta {
       margin: 0 0 0 15px;
     }
+
+    &:not(.btn-cta):hover { text-decoration: underline; }
   }
 
   li {
