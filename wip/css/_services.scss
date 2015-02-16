@@ -17,6 +17,7 @@
       font-size: 1em;
       opacity: .7;
       margin: 0;
+      font-weight: 400;
 
       &:after { display: none; }
     }
@@ -24,6 +25,16 @@
 
   article {
     margin-bottom:50px;
+    padding: 0 0 0 6em;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      font-size: 4em;
+      top: 50%;
+      margin-top: -.5em;
+      left: 0;
+    }
     &:last-child { margin-bottom: 0; }
   }
 

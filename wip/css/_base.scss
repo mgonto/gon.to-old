@@ -26,17 +26,20 @@ section {
 
 .wrapper {
   margin: 0 auto;
+  padding: 0 20px;
   text-align: left;
 }
 
 h3 {
   font-size: 2em;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
+  font-weight: 600;
 }
 
 h3 + p {
   font-size: 1.6em;
   opacity: .7;
+  margin: 0;
 
   /* &:after {
     display: block;
@@ -47,6 +50,11 @@ h3 + p {
     background: $hero;
     opacity: .3;
   } */
+}
+
+h3 ~ a {
+  margin-top: 40px;
+  display: inline-block;
 }
 
 h3, h4 ,h5 ,h6 {

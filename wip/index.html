@@ -5,20 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/compressed.js"></script-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/midnight.jquery.min.js"></script>
+  <script type="text/javascript" src="js/site.js"></script>
 	<title>Bones</title>
 </head>
 <body>
 
   <header id="header">
     <div class="wrapper">
-      <h1><a href=""> </a></h1>
+      <h1><a href="" class="backToTop">
+        <svg version="1.1" id="gonto-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.346px" height="31.822px" viewBox="0 0 28.346 31.822" enable-background="new 0 0 28.346 31.822" xml:space="preserve">
+          <path fill="#FFFFFF" d="M4.148,8.587c2.59-2.59,5.551-3.975,8.881-4.152l-2.07-2.07L13.324,0l6.105,6.104l-2.366,2.364
+          c-1.468-0.58-3.169-0.699-5.099-0.361c-1.934,0.338-3.629,1.238-5.09,2.699c-2.029,2.031-2.948,4.318-2.752,6.864
+          c0.197,2.545,1.26,4.786,3.192,6.717c2.217,2.217,4.646,3.306,7.286,3.266c2.64-0.037,4.903-1.003,6.791-2.892
+          c1.479-1.477,2.386-3.207,2.719-5.189c0.334-1.979-0.07-3.735-1.211-5.268l-3.351,3.353l-2.325-2.325l6.76-6.757
+          c0.248,0.231,0.467,0.441,0.653,0.627c2.609,2.608,3.843,5.552,3.699,8.829c-0.142,3.276-1.616,6.318-4.42,9.122
+          c-3.356,3.356-6.813,4.903-10.371,4.641c-3.558-0.264-6.64-1.698-9.249-4.307c-2.732-2.734-4.162-5.845-4.288-9.336
+          C-0.117,14.66,1.264,11.472,4.148,8.587"/>
+        </svg>
+
+      </a></h1>
       <nav>
         <ul>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Talks</a></li>
-          <li><a href="">Blog</a></li>
           <li><a href="" class="btn-cta">Contact</a></li>
         </ul>
       </nav>
@@ -35,22 +44,22 @@
     </div>
   </section>
 
-  <section id="services">
+  <section id="services" data-midnight="white">
     <div class="wrapper">
       <header>
         <h3>What I do</h3>
         <p>I'm more than just a developer</p>
       </header>
       <div class="content">
-        <article class="solutions">
+        <article class="solutions fa fa-bullseye">
           <h3>Software Solutions</h3>
           <p>I have vast experience creating highly scalable applications intended for mass-market use. From online marketplaces to web media outlets and complex APIs, I can work with your team to create great products.</p>
         </article>
-        <article class="trainings">
+        <article class="trainings fa fa-book">
           <h3>Trainings</h3>
           <p>I can help your company get proficient by giving trainings that will expand your employee's knowledge by learning both theory about languages and frameworks as well as practice with real life examples.</p>
         </article>
-        <article class="consulting">
+        <article class="consulting fa fa-compass">
           <h3>Consulting</h3>
           <p>I can work with your company's employees by helping with Software Architecture, API Design and Good Practices so that you can achieve a maintainable and robust product.</p>
         </article>
@@ -58,7 +67,7 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-midnight="white">
     <div class="wrapper">
       <header>
         <h3>Projects I've been involved in</h3>
@@ -114,7 +123,7 @@
     </div>
   </section>
 
-  <section id="talks">
+  <section id="talks" data-midnight="white">
     <div class="wrapper">
       <header>
         <h3>Talks</h3>
@@ -153,7 +162,7 @@
     </div>
   </section>
 
-  <section id="future-talk">
+  <section id="future-talk" data-midnight="white">
     <div class="wrapper">
       <article>
         <h5>Next Talk</h4>
@@ -166,7 +175,6 @@
 
   <footer id="footer">
     <div class="wrapper">
-      <h6>Sarasa</h6>
       <ul>
         <li><a href="" class="fa fa-github"></a></li>
         <li><a href="" class="fa fa-linkedin"></a></li>
