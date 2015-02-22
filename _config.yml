@@ -1,9 +1,9 @@
 # Site settings
-title: 'Resume | Martin Gontovnikas: Freelance Software Architect'
+title: 'Resume | Martin Gontovnikas: Software Consultant'
 email: martin@gon.to
 description: 'This is the Resume and Portfolio of Martin Gontovnikas (@mgonto): A software engineer currently working with Javascript, Node, AngularJS, Scala and Akka.'
 baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
-url: "http://mgonto.github.io" # the base hostname & protocol for your site
+# url: "http://mgonto.github.io" # the base hostname & protocol for your site
 twitter_username: mgonto
 github_username:  mgonto
 excerpt_separator: '<!-- more -->'
