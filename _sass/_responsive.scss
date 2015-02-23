@@ -12,11 +12,11 @@
   #header .wrapper {
     padding: 10px 20px;
   }
-  .wrapper { 
+  .wrapper {
     width: 100%;
     padding: 0 20px;
   }
-  section:not(#hero) .wrapper { 
+  section:not(#hero) .wrapper {
     display: block !important;
   }
   .content, section header {
@@ -26,6 +26,7 @@
     text-align: center !important;
   }
   #projects header .btn-cta { display: none; }
+  #talks header .btn-cta { display: none; }
 
   h3 {
     font-size: 1.5em;
