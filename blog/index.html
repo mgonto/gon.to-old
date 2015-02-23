@@ -9,7 +9,7 @@ comments: false
 <article class="hentry">
   <header>
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.baseurl }}/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
+      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
       {% if site.reading_time %}
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -19,9 +19,9 @@ comments: false
       {% endif %}
     </div><!-- /.entry-meta -->
     {% if post.link %}
-      <h1 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
     {% else %}
-      <h1 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
     {% endif %}
   </header>
   <div class="entry-content">
@@ -33,9 +33,9 @@ comments: false
 <div class="pagination">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-      <a href="{{ site.baseurl }}/blog/" class="btn">Previous</a>
+      <a href="{{ site.url }}/blog/" class="btn">Previous</a>
     {% else %}
-      <a href="{{ site.baseurl }}/blog/page{{ paginator.previous_page }}" class="btn">Previous</a>
+      <a href="{{ site.url }}/blog/page{{ paginator.previous_page }}" class="btn">Previous</a>
     {% endif %}
   {% else %}
     Previous
@@ -45,7 +45,7 @@ comments: false
       {% if paginator.page == 1 %}
         <span class="current-page">1</span>
       {% else %}
-        <a href="{{ site.baseurl }}/blog/">1</a>
+        <a href="{{ site.url }}/blog/">1</a>
       {% endif %}
     </li>
     {% for count in (2..paginator.total_pages) %}
@@ -53,13 +53,13 @@ comments: false
         {% if count == paginator.page %}
           <span class="current-page">{{ count }}</span>
         {% else %}
-          <a href="{{ site.baseurl }}/blog/page{{ count }}">{{ count }}</a>
+          <a href="{{ site.url }}/blog/page{{ count }}">{{ count }}</a>
         {% endif %}
       </li>
     {% endfor %}
   </ul>
   {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}/blog/page{{ paginator.next_page }}" class="btn">Next</a>
+    <a href="{{ site.url }}/blog/page{{ paginator.next_page }}" class="btn">Next</a>
   {% else %}
     Next
   {% endif %}

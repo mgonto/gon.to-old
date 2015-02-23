@@ -2,11 +2,11 @@
 title: 'Resume | Martin Gontovnikas: Software Consultant'
 email: martin@gon.to
 description: 'This is the Resume and Portfolio of Martin Gontovnikas (@mgonto): A software engineer currently working with Javascript, Node, AngularJS, Scala and Akka.'
-disqus_shortname: blogeek
+disqus_shortname: gontosblog
 reading_time:     true
 words_per_minute: 200
-baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
-# url: "http://mgonto.github.io" # the base hostname & protocol for your site
+# baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
+url: "http://gon.to" # the base hostname & protocol for your site
 excerpt_separator: '<!-- more -->'
 
 paginate: 5
@@ -19,7 +19,7 @@ owner:
 
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:
+google_analytics: UA-48082910-1
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
