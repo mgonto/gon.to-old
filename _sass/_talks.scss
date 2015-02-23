@@ -14,14 +14,14 @@
 
     &:last-child { margin-bottom: 0; }
 
-    .read-more {
+    .more-info {
       color: $cta;
       text-transform: uppercase;
       font-size: .75em;
       font-weight: bold;
     }
 
-    &:hover .read-more {
+    &:hover .more-info {
       text-decoration: underline;
     }
     a {
