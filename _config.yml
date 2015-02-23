@@ -6,7 +6,7 @@ disqus_shortname: gontosblog
 reading_time:     true
 words_per_minute: 200
 # baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
-# url: "http://gon.to" # the base hostname & protocol for your site
+url: "http://gon.to" # the base hostname & protocol for your site
 excerpt_separator: '<!-- more -->'
 
 paginate: 5
