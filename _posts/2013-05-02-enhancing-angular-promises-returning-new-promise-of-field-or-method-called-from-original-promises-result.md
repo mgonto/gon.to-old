@@ -21,7 +21,7 @@ So, what&#8217;s the idea? You have a function that returns a promise for an obj
 
 I implemented this without functions, using names of the fields or of the function. So, let&#8217;s see some code to finally understand this.
 
-````js
+```js
 // This will return a promise of an Array
 var promisedArray = $q.when([1,2,3]);
 
@@ -36,14 +36,14 @@ promisedArray.then(function(arr) {
 var lengthPromise = promisedArray.get('length');
 
 //Calling methods
-var biggerArrayPromise = promisedArray.call("push", {name: "Gonto"});</code></pre>
-````
+var biggerArrayPromise = promisedArray.call("push", {name: "Gonto"});
+```
 
 So, what&#8217;s the usage of this? Angular already knows how to work with promises and how to resolve them when working with views. What this means is that if in our template we put *{{lengthPromise}}, *once the promise is resolved (value is returned), it will be shown in the HTML. Before, nothing will be shown. That&#8217;s thanks to using $q from Angular.
 
 So, let&#8217;s see the implementation.
 
-````js
+```javascript
 function enhancePromise(promise, isCollection) {
     promise.call = angular.bind(promise, promiseCall);
     promise.get = angular.bind(promise, promiseGet);
@@ -69,7 +69,7 @@ function promiseGet(what) {
     });
     return enhancePromise(deferred.promise);
 }
-````
+```
 
 I&#8217;ve [implemented it in Restangular][1] but I&#8217;m thinking in creating an Angular module for this. Do you think it&#8217;d be useful?
 

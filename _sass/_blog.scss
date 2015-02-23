@@ -1,0 +1,19 @@
+.blog.post {
+  .entry-title a {
+    color: white;
+  }
+
+  .header-title {
+    p, span {
+      color: rgba(200,200,200,0.8);
+    }
+  }
+}
+
+.blog.list {
+  .entry-meta {
+    p, span, a {
+      color: $base-color;
+    }
+  }
+}

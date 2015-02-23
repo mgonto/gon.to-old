@@ -5,51 +5,32 @@
 
 
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$blue:             #2566B3;
-$orange:           #F9A52F;
-$white:            #FFFFFF;
-$black:            #000000;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "reset",
-        "layout",
-        "grid",
-        "tools",
-        "posts",
-        "gonto"
-;
+// @import "normalize.css";
+@import "vars";
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "animate.css";
+@import "fonts";
+@import "grid";
+@import "base";
+@import "header";
+@import "hero";
+@import "services";
+@import "projects";
+@import "talks";
+@import "future-talk";
+@import "footer";
+@import "responsive";
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/magnific-popup/magnific-popup";
+@import "site";
+@import "typography";
+@import "pygments";
+@import "coderay";
+@import "gist";
+@import "gridblog";
+@import "elements";
+@import "animations";
+@import "page";
+@import "blog";

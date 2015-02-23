@@ -32,7 +32,7 @@ Then, you normally do **git clone git@github.com:mgonto/factory_pal.git**
 
 As you might know, Github also provides us with a Wiki, where we can put text and everything we want.
 
-**Actually, the wiki is another Git repository that we can access. We just have to add a &#8220;.wiki&#8221; before the &#8220;.git&#8221; part of the url. So for the **git@github.com:mgonto/factory_pal.git, the wiki repository is **git@github.com:mgonto/factory_pal.wiki.git.******
+**Actually, the wiki is another Git repository that we can access**. We just have to add a &#8220;.wiki&#8221; before the &#8220;.git&#8221; part of the url. So for the **git@github.com:mgonto/factory_pal.git, the wiki repository is git@github.com:mgonto/factory_pal.wiki.git.**
 
 &nbsp;
 
@@ -40,7 +40,7 @@ As you might know, Github also provides us with a Wiki, where we can put text an
 
 **You can clone that directory and have a secondary Git repository for anything you want.**
 
-****So, what are possible usages of this?
+**So, what are possible usages of this?**
 
 I usually have some documentation for the project. This documentation can be Mockups, client meetings, UMLs diagrams and so on. I used to have in my Github repository a code and docs folder. **Now, I store the code in the regular repository where I can have pull requests, and the documentation in the wiki repository, together with the wiki pages.** This makes it easier to separate our concerns in my opinion.
 

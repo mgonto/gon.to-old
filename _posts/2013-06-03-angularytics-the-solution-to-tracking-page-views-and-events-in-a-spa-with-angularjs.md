@@ -20,7 +20,10 @@ tags:
   - track
 
 ---
+-----------
 **<a href="https://github.com/mgonto/angularytics" target="_blank">TL;DR: Check out the Angularytics GitHub repo and quick bootstrap here</a>**
+
+-----------
 
 Hey,
 

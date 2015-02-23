@@ -1,134 +1,146 @@
 ---
-layout: default
+layout: home
+bodyClass: home
+comments: false
 ---
+<section id="hero">
+  <div class="wrapper">
+    <article>
+      <h2>Hi, I'm Martin Gontovnikas</h2>
+      <p>I'm a software consultant from Buenos Aires, Argentina</p>
+    </article>
+    <span class="scroll-down fa-main fa-main-angle-down"></span>
+  </div>
+</section>
 
-<div class="home">
-  <section class="image">
-    <img src="img/gonto.jpg" alt="">
-  </section>
+<section id="services" data-midnight="white">
+  <div class="wrapper">
+    <header>
+      <h3>What I do</h3>
+      <p>I'm more than just a developer</p>
+    </header>
+    <div class="content">
+      <article class="solutions fa-main fa-main-bullseye">
+        <h3>Software Solutions</h3>
+        <p>I have vast experience creating highly scalable applications intended for mass-market use. From online marketplaces to web media outlets and complex APIs, I can work with your team to create great products.</p>
+      </article>
+      <article class="trainings fa-main fa-main-book">
+        <h3>Trainings</h3>
+        <p>I can help your company get proficient by giving trainings that will expand your employee's knowledge by learning both theory about languages and frameworks as well as practice with real life examples.</p>
+      </article>
+      <article class="consulting fa-main fa-main-compass">
+        <h3>Consulting</h3>
+        <p>I can work with your company's employees by helping with Software Architecture, API Design and Good Practices so that you can achieve a maintainable and robust product.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <section class="services" id="services-row">
-      <div class="container">
-          <div class="row">
-              <div class="column-1-3 text-center">
-                <img alt="Software Solutions" src="http://gon.to/wp-content/uploads/2014/02/software.png" />
-                <h2>SOFTWARE SOLUTIONS</h2>
-                <p class="services-text">I have vast experience creating highly scalable applications intended for mass-market use. From online marketplaces to web media outlets and complex APIs, I can work with your team to create great products.</p>
+<section id="projects" data-midnight="white">
+  <div class="wrapper">
+    <header>
+      <h3>Projects I've been involved in</h3>
+      <p>Both private and open source</p>
+      <a href="https://github.com/mgonto" target="_blank" class="btn-cta secondary">View all</a>
+    </header>
+    <div class="content">
+      <ul>
+        <li>
+          <a target="_blank" href="https://auth0.com">
+            <h6>NodeJS</h6>
+            <h5>Auth0</h5>
+            <p>Auth0 is a SaaS that helps you with Authentication and Authorization.</p>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/mgonto/restangular">
+            <h6>AngularJS</h6>
+            <h5>Restangular</h5>
+            <p>AngularJS service to handle Rest API Restful Resources properly and easily.</p>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/mgonto/factory_pal">
+            <h6>Scala</h6>
+            <h5>Factory_pal</h5>
+            <p>A Scala framework for creating objects as test data. Say no to Mocks.</p>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/mgonto/angularytics">
+            <h6>AngularJS</h6>
+            <h5>Angularytics</h5>
+            <p>The solution to tracking page views and events in a SPA with AngularJS.</p>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/mgonto/angular-wizard">
+            <h6>AngularJS</h6>
+            <h5>Angular-wizard</h5>
+            <p>Easy to use Wizard library for AngularJS.</p>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/mgonto/meaner-seed">
+            <h6>AngularJS</h6>
+            <h5>Meaner-seed</h5>
+            <p>A better organised, more complete and updated MEAN seed.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-              </div>
-              <div class="column-1-3 text-center">
-                <img alt="TRAININGS" src="http://gon.to/wp-content/uploads/2014/02/training.png" />
-                <h2>TRAININGS</h2>
-                <p class="services-text">I can help your company get proficient by giving trainings that will expand your employee's knowledge by learning both theory about languages and frameworks as well as practice with real life examples.</p>
+<section id="talks" data-midnight="white">
+  <div class="wrapper">
+    <header>
+      <h3>Talks</h3>
+      <p>Sharing knowledge</p>
+      <a href="http://lanyrd.com/profile/mgonto/" target="_blank" class="btn-cta secondary">View all</a>
+    </header>
+    <div class="content">
+      <article>
+        <a target="_blank" href="https://www.youtube.com/watch?v=lDb_GANDR8U">
+          <h4>Death to cookies, long live JSON Web Tokens</h4>
+          <p>A newer aproach to handling authentication with Single Page Apps: Using JSON Web Tokens instead of cookies</p>
+          <span class="more-info">Read more</span>
+        </a>
+      </article>
+      <article>
+        <a target="_blank" href="https://www.youtube.com/watch?v=fWar75R1NGo">
+          <h4>Restangular 2.0: The future and beyond</h4>
+          <p>A sumup of all the upcoming features from Restangular 2.0</p>
+          <span class="more-info">Read more</span>
+        </a>
+      </article>
+      <article>
+        <a target="_blank" href="https://www.parleys.com/play/53677646e4b0593229b85841/chapter1/about">
+          <h4>Reactive Angular</h4>
+          <p>An introduction to Reactive Programming and examples of
+    how to use it with modern MVC FrontEnd JS frameworks like AngularJS.</p>
+          <span class="more-info">Read more</span>
+        </a>
+      </article>
+      <article>
+        <a target="_blank" href="http://forwardjs.com/schedule#martin">
+          <h4>Stop wasting developers time! How to write good documentation?</h4>
+          <p>I share my experience creating Auth0's documentation. Some very
+    useful tips and things every documentation aimed for developers should have.</p>
+          <span class="more-info">Read more</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
 
-              </div>
-              <div class="column-1-3 text-center">
-                <img alt="CONSULTING" src="http://gon.to/wp-content/uploads/2014/02/map.png" />
-                <h2>CONSULTING</h2>
-                <p class="services-text">I can work with your company's employees by helping with Software Architecture, API Design and Good Practices so that you can achieve a maintainable and robust product.</p>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section class="projects" id="projects-row">
-      <div class="container">
-          <div class="row">
-              <div class="column-2-4">
-                  <h3 class="uppercase">Featured Project</h3>
-                  <img class="width-100" alt="Aquicore" src="http://gon.to/wp-content/uploads/2014/02/home@2x2.png" />
-                  <p>Aquicore helps companies reduce their operating costs by showing granular and real time information about energy usage and consumption. I’ve helped design the overall architecture and code critical parts of the Startup in AngularJS, Scala, Node and Java.</p>
-                  <a class="btn secondary" title="link a..." href="http://aquicore.com">More info</a>
-
-              </div>
-              <div class="column-2-4">
-                  <h3 class="uppercase">Open Source Projects</h3>
-                  <h4 class="uppercase"><a href="https://github.com/mgonto/restangular" title='Restangular Repository'>Restangular</a></h4>
-                  <p>AngularJS service to handle Rest API Restful Resources properly and easily.</p>
-                  <hr />
-                  <h4 class="uppercase"><a href='https://github.com/mgonto/factory_pal' title='Factory Pal Repository'>FactoryPal</a></h4>
-                  <p>A Scala framework for creating objects as test data. Say no to Mocks.</p>
-                  <hr />
-                  <h4 class="uppercase"><a href='https://github.com/mgonto/angularytics' title='Angular Wizard Repository'>Angularytics</a></h4>
-                  <p>The solution to tracking page views and events in a SPA with AngularJS.</p>
-                  <hr />
-                  <h4 class="uppercase"><a href='https://github.com/mgonto/angular-wizard' title='Angular Wizard Repository'>Angular-Wizard</a></h4>
-                  <p>Easy to use Wizard library for AngularJS.</p>
-                  <hr />
-                  <h4 class="uppercase"><a href='https://github.com/mgonto/meaner-seed' title='Meaner Seed Repository'>meaner-seed</a></h4>
-                  <p>A better organised, more complete and updated MEAN seed</p>
-                  <a class="btn secondary" title="link a..." href="https://github.com/mgonto?tab=repositories">View all</a>
-
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section class="talks" id="talks-row">
-      <div class="container">
-          <div class="row">
-              <div class="column-2-4">
-                  <h3 class="uppercase">Talks</h3>
-                  <h4 class="uppercase">CONSUMING REST APIS WITH RESTANGULAR</h4>
-                  <p>An overview of the main features of Restangular and the advantage of using it over $resource.</p>
-                  <a class="btn primary orange-background" title="Link to CONSUMING REST APIS WITH RESTANGULAR" href="http://mgonto.github.io/restangular-talk/">View this talk online</a>
-
-                  <hr />
-
-                  <h4 class="uppercase">Play! Framework: A KISS Framework</h4>
-                  <p>An Introduction to Play Framework showing its advantages and disadvantages against other MVC libraries.</p>
-                  <a class="btn primary orange-background" title="Link to Play! Framework: A KISS Framework" href="http://vimeo.com/38604912">View online</a>
-
-              </div>
-              <div class="column-2-4">
-                  <h3 class="uppercase">Future Talks</h3>
-                  <h4 class="uppercase">REACTIVE ANGULAR</h4>
-                  <p>An introduction to the reactive pattern and show by example of how to use it with modern MVC FrontEnd JS frameworks like AngularJS.</p>
-                  <a class="btn primary orange-background" title="Link to REACTIVE ANGULAR" href="http://cfp.devoxx.fr/devoxxfr2014/talk/WDJ-026/Reactive%20Angular">View Conference Page</a>
-
-                  <hr />
-
-                  <h4 class="uppercase">Models and Rest APIs on AngularJS with Restangular</h4>
-                  <p>Creating models with state and behaviour in AngularJS with the help of Restangular.</p>
-                  <a class="btn primary orange-background" title="Link to REACTIVE ANGULAR" href="http://cfp.devoxx.fr/devoxxfr2014/talk/GKK-617/Models%20and%20Rest%20APIs%20on%20AngularJS%20with%20Restangular">View Conference Page</a>
-
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section class="contact">
-      <div class="container">
-          <div class="row">
-              <div class="column-2-3">
-                  <h2 class="blue">HIRE ME!</h2>
-                  <form accept-charset="UTF-8" action="https://getsimpleform.com/messages?form_api_token=b2ab5448cbb6cba0ab152e3e3950f874" method="POST">
-                      <input type="hidden" name="utf8" value="✓">
-                      <div>
-                          <label for="">Your name *</label>
-                          <input required="required" type="text" placeholder="name" name="name">
-                      </div>
-                      <div>
-                          <label for="">Your email *</label>
-                          <input required="required" type="text" placeholder="email" name="email">
-                      </div>
-                      <div>
-                          <label for="">Your message *</label>
-                          <textarea required="required" cols="30" rows="10" name="content"></textarea>
-                      </div>
-                      <input class="btn primary margin-top" type="submit" />
-                  </form>
-
-              </div>
-              <div class="column-1-3">
-                  <h2 class="blue">CONTACT</h2>
-                  <a class="github" href="https://github.com/mgonto">github</a><br>
-                  <a class="linkedin" href="http://www.linkedin.com/in/mgonto">linkedIn</a><br>
-                  <a class="twitter" href="https://twitter.com/mgonto">Twitter</a>
-
-              </div>
-          </div>
-      </div>
-  </section>
-
-</div>
+<section id="future-talk" data-midnight="white">
+  <div class="wrapper">
+    <article>
+      <h5>Next Talk</h4>
+      <h4><a target="_blank" href="https://github.com/ng-conf/submissions-2015/tree/master/reactive-all-the-things">Reactive all the things</a></h4>
+      <p>March 4th – Salt Lake City, Utah, USA</p>
+    </article>
+    <a target="_blank" href="http://www.ng-conf.org/" class="btn-cta secondary">Conference Site</a>
+  </div>
+</section>
