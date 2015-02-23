@@ -91,13 +91,13 @@ building.evaluate({myParam: 'param'}, {'myHeader': 'specialHeaderCase'});
 **4) It&#8217;s now available in a CDN.**
 
 ````html
-&lt;!-- Use LATEST folder to always get the latest version--&gt;
-&lt;script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.min.js"&gt;&lt;/script&gt;
+<!-- Use LATEST folder to always get the latest version-->
+<script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.min.js"></script>
 
-&lt;!-- Or use TAG number for specific version --&gt;
-&lt;script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/0.5.3/restangular.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/0.5.3/restangular.min.js"&gt;&lt;/script&gt;
+<!-- Or use TAG number for specific version -->
+<script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/0.5.3/restangular.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/0.5.3/restangular.min.js"></script>
 ````
 
 **5) Now you can send your own Headers**
@@ -133,7 +133,7 @@ app.config(function(RestangularProvider) {
 
 **7) Restangularized promises**
 
-****Now all promises are enhanced as well. You can for example add a new element to the promise of an array returned by getList without calling the then. It will return a new Promise of the edited array, which you can use in your view as Angular knows how to handle promises. Take a look
+**Now all promises are enhanced as well**. You can for example add a new element to the promise of an array returned by getList without calling the then. It will return a new Promise of the edited array, which you can use in your view as Angular knows how to handle promises. Take a look
 
 ````js
 var buildings = Restangular.all("buildings").getList();

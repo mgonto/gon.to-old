@@ -87,11 +87,10 @@ Take a special look into the devDependencies. In there, we&#8217;re stating that
 }
 ````
 
-6) Now, we have everything we need to start creating our *Gruntfile.js*. This file is the one read when running grunt in that directory. Check this Gruntfile. I&#8217;ll explain it below <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> *  
-*
+6) Now, we have everything we need to start creating our *Gruntfile.js*. This file is the one read when running grunt in that directory. Check this Gruntfile. I&#8217;ll explain it below <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> 
 
-<noscript>
-  <pre><code class="language-javascript javascript">'use strict';
+```js
+'use strict';
 
 module.exports = function(grunt) {
 
@@ -122,8 +121,8 @@ module.exports = function(grunt) {
 
   // Build task.
   grunt.registerTask('build', ['bowerInstall', 'bower']);
-};</code></pre>
-</noscript>
+};
+```
 
 So, let&#8217;s explain this step by step. With *loadNpmTasks *we&#8217;re loading some plugin. As that plugin has been installed with npm install, it&#8217;ll be available through an npm task. As you can see, we import the 2 devDependencies we added in the package.json. The problem is that both of those dependencies actually define a task named bower, so by default I can&#8217;t import both as one would override the other. That&#8217;s why I first import one, then rename that one, and then I import the other. *grunt-bower-task* will take care of running bower install. *grunt-bower* will take care of retrieving the main file of each dependency and copy it somewhere.
 
@@ -135,9 +134,10 @@ That&#8217;s it! This is all we need to configure.
 
 Now, you can just run:
 
-*npm install*
-
-*grunt*
+```bash
+npm install
+grunt
+```
 
 And now you have all of your dependencies copied to /dist/dependencies. <img src="http://gon.to/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Just 2 commands after the configuration has been done.
 

@@ -5,10 +5,14 @@
 
 body {
 	font-family: "Open sans", sans-serif;
-	font-size: 16px;
-	line-height: 26px;
 	-webkit-font-smoothing: antialiased;
-	color: #5b5b5f;
+
+}
+
+body.home {
+  font-size: 16px;
+  line-height: 26px;
+  color: #5b5b5f;
 }
 
 section {

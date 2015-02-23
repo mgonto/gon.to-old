@@ -18,10 +18,11 @@ tags:
   - video
   - web
   - webapp
-image: http://localhost:4000/gon.to/img/gonto.jpg
 ---
-**[TL;DR: I&#8217;ve created a new Play Framework Video Course. Please click here to check it out.][1]  
-**
+-----------
+**[TL;DR: I&#8217;ve created a new Play Framework Video Course. Please click here to check it out.][1]**
+
+----------------
 
 Hey,
 

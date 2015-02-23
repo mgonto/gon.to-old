@@ -5,10 +5,12 @@
 
 
 
-@import "normalize.css";
-@import "animate.css";
+// @import "normalize.css";
 @import "vars";
 @import "variables";
+@import "mixins";
+@import "reset";
+@import "animate.css";
 @import "fonts";
 @import "grid";
 @import "base";
@@ -20,8 +22,7 @@
 @import "future-talk";
 @import "footer";
 @import "responsive";
-@import "mixins";
-// @import "vendor/font-awesome/font-awesome";
+@import "vendor/font-awesome/font-awesome";
 @import "vendor/magnific-popup/magnific-popup";
 @import "site";
 @import "typography";
@@ -32,4 +33,4 @@
 @import "elements";
 @import "animations";
 @import "page";
-
+@import "blog";

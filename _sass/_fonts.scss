@@ -12,7 +12,7 @@
   font-style: normal;
 }
 
-.fa:after, .fa:before {
+.fa-main:after, .fa-main:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -21,36 +21,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 /* makes the font 33% larger relative to the icon container */
-.fa-lg:before, .fa-lg:after {
+.fa-main-lg:before, .fa-main-lg:after {
   font-size: 1.33333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
 
-.fa-angle-down:before {
+.fa-main-angle-down:before {
   content: "\f107";
 }
 
-.fa-twitter:before {
+.fa-main-twitter:before {
   content: "\f099";
 }
 
-.fa-github:before {
+.fa-main-github:before {
   content: "\f09b";
 }
 
-.fa-linkedin:before {
+.fa-main-linkedin:before {
   content: "\f0e1";
 }
 
-.fa-compass:before {
+.fa-main-compass:before {
   content: "\f14e";
 }
 
-.fa-book:before {
+.fa-main-book:before {
   content: "\f02d";
 }
 
-.fa-bullseye:before {
+.fa-main-bullseye:before {
   content: "\f140";
 }

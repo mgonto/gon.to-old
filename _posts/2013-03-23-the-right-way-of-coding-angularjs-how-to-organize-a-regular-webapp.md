@@ -93,13 +93,14 @@ module.directive('footer', function () {
     }
 });
 ````
-````html  
-&lt;div&gt;
-  &lt;p&gt;
+
+```html  
+<div>
+  <p>
     This is the footer. Yeah baby. Coyrhing and all of that!
-  &lt;/p&gt;
-&lt;/div&gt;
-````html
+  </p>
+</div>
+```
 
 
 3) Almost same things happen with Header. We&#8217;re going to use this in many places but it has some differences. For this cases, I use AngularUI ui-if directive which is awesome, as that&#8217;s exactly what we want. Depending on something we show one content or another. Check it out [clicking here][1]
@@ -118,17 +119,17 @@ module.directive('header', function () {
 });
 ````
 ````html
-&lt;div&gt;
-  &lt;p&gt;
+<div>
+  <p>
     This part of the hader is always here
-  &lt;/p&gt;
-  &lt;p ui-if="user"&gt;
+  </p>
+  <p ui-if="user">
     User {{user.name}} is logged in :D
-  &lt;/p&gt;
-  &lt;p ui-if="!user"&gt;
+  </p>
+  <p ui-if="!user">
     Hey buddy, log in! Be cool
-  &lt;/p&gt;
-&lt;/div&gt;
+  </p>
+</div>
 ````
 
 Here, there are 2 important things to note. First the scope attribute, where we put user: &#8220;=&#8221;. What does this mean? This will add the user to out scope ($scope.user). It will create a bidirectional asociation with the value supplied in the HTML as a parameter. If the user doesn&#8217;t put anything, it will be asumed that the name of the parent scope variable is user (Don&#8217;t do this, it&#8217;s impossible to understand :)). What does this mean in english?
@@ -140,44 +141,44 @@ If you put <div header user=&#8221;userModel&#8221;> in the template HTML for t
 &nbsp;
 
 ````html
-&lt;div&gt;
-  &lt;div header&gt;&lt;/div&gt;
+<div>
+  <div header></div>
   
-  &lt;div class="main-content"&gt;
-    &lt;p&gt;
+  <div class="main-content">
+    <p>
       Here it's this page specific content :)
-    &lt;/p&gt;
-  &lt;/div&gt;
+    </p>
+  </div>
   
-  &lt;div footer&gt;&lt;/div&gt;
-&lt;/div&gt;
+  <div footer></div>
+</div>
 ````
 
 ````html
-&lt;div&gt;
-  &lt;div header user="player"&gt;&lt;/div&gt;
+<div>
+  <div header user="player"></div>
   
-  &lt;div class="main-content"&gt;
-    &lt;p&gt;
+  <div class="main-content">
+    <p>
       Here it's this page specific content :)
-    &lt;/p&gt;
-  &lt;/div&gt;
+    </p>
+  </div>
   
-  &lt;div footer&gt;&lt;/div&gt;
-&lt;/div&gt;
+  <div footer></div>
+</div>
 ````
   
 ````html
-&lt;div&gt;
-  &lt;div header user="userModel"&gt;&lt;/div&gt;
+<div>
+  <div header user="userModel"></div>
   
-  &lt;div class="main-content"&gt;
-    &lt;p&gt;
+  <div class="main-content">
+    <p>
       Here it's this page specific content :)
-    &lt;/p&gt;
-  &lt;/div&gt;
+    </p>
+  </div>
   
-&lt;/div&gt;
+</div>
 ````
 
 And we finished. We&#8217;ve an app up and running with a header, a footer and specific content for each page. Now, every time we add a page, all we need to do is just create the controller, create the template and add the header and footer if needed and that&#8217;s it.
