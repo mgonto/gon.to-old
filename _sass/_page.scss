@@ -1,7 +1,4 @@
 body.blog {
-	margin: 0;
-	padding: 0;
-	width: 100%;
 	background-color: $body-color;
 }
 
@@ -257,6 +254,7 @@ header .entry-meta {
 .pagination {
 	margin: 20px 10px;
 	text-align: center;
+  color: $white;
 	ul {
 		display: inline;
 		margin-left: 10px;
@@ -266,6 +264,9 @@ header .entry-meta {
 		padding-left: 4px;
 		padding-right: 4px;
 	}
+  a {
+    color: $white
+  }
 	.current-page {
 		font-weight: 700;
 	}
