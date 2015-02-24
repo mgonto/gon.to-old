@@ -5,8 +5,9 @@ description: 'This is the Resume and Portfolio of Martin Gontovnikas (@mgonto): 
 disqus_shortname: gontosblog
 reading_time:     true
 words_per_minute: 200
+logo: logos/144x144.png
 # baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
-url: "http://gon.to" # the base hostname & protocol for your site
+# url: "http://gon.to" # the base hostname & protocol for your site
 excerpt_separator: '<!-- more -->'
 
 paginate: 5
@@ -16,6 +17,7 @@ paginate_path: "blog/page:num"
 owner:
   name:           Martin Gontovnikas
   email:          martin@gon.to
+  twitter: mgonto
 
 
 # Analytics and webmaster tools stuff goes here
@@ -24,11 +26,14 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
+
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
 future:      true
 gems:
   - jekyll-sitemap
+  - jemoji
+  - jekyll-redirect-from
 sass:
   sass_dir: _sass
   style: compressed
