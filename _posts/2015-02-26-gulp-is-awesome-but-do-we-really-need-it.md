@@ -28,6 +28,62 @@ Before Grunt existed, I thought that doing this in an easy and manteinable way w
 
 Let's start from the begining. A few months back, I built a seed project for creating Single Page Apps (SPAs) without any framework at all. For this project, I created what I thought was a [simple `Gulpfile.js`](https://github.com/auth0/single-page-app-seed/blob/master/gulpfile.js). 
 
+```js
+// Uses browserify node.js package
+function bundle(browserified, env) {
+  browserified
+    .bundle()
+    .pipe(source('build.js'))
+    .pipe(gulp.dest('./build/'));
+}
+
+
+function browserifyTask(env) {
+  return function() {
+    var file = path.resolve('index.js');
+    var browserified = browserify(watchify.args);
+
+    if (env === 'prod') {
+      browserified.transform({global: true}, 'uglifyify');
+    }
+    if (env === 'dev') {
+       browserified = watchify(browserified);
+       browserified.on('update', function(){
+        bundle(browserified, env);
+      });
+    }
+
+    browserified.transform(stringify(['.html']));
+    bundle(browserified.add(file), env);
+  }
+}
+
+// Uses Rework node.js package
+gulp.task('reworkcss', function() {
+  var file = path.resolve('index.css');
+  var source = path.relative(__dirname, file);
+  var output = fs.createWriteStream('build/build.css');
+  var contents = fs.readFileSync(file, {encoding: 'utf8'});
+
+  // Initialize and pluginize `rework`
+  var css = rework(contents);
+  css.use(npmRework());
+
+  // write result
+  output.write(css.toString())
+  output.end();
+});
+
+// Calls browserify function
+gulp.task('browserify-dev', browserifyTask('dev'));
+
+// Uses gulp-serve to serve the directory
+gulp.task('serve', serve(__dirname));
+
+// Calls browserify, rework and then serves
+gulp.task('watch', ['browserify-dev', 'reworkcss', 'serve']);
+```
+
 Basically, it had the [`watch` task](https://github.com/auth0/single-page-app-seed/blob/master/gulpfile.js#L82) which took care of [calling `browserify` and apply the needed transformations](https://github.com/auth0/single-page-app-seed/blob/master/gulpfile.js#L23-L49) as well as [using `rework` for CSS requires](https://github.com/auth0/single-page-app-seed/blob/master/gulpfile.js#L62-L75) and finally [serving the `build/` folder](https://github.com/auth0/single-page-app-seed/blob/master/gulpfile.js#L56).
 
 Gulp in its core is really simple!. It just provides a way of creating a stream from several source files and then pipe it through different transformations. Usually, those transformations are either just regular node.js packages like [`browserify`, `rework` and `watchify`](https://github.com/auth0/single-page-app-seed/blob/master/gulpfile.js#L9-L10) or simple wrappers that makes regular node.js packages work with stream like [`gulp-serve`](https://github.com/auth0/single-page-app-seed/blob/master/gulpfile.js#L15) which is just a wrapper on top of [`serve`](https://github.com/tj/serve).
@@ -39,6 +95,19 @@ This week, I decided to update that seed project to make it work with React for 
 > Side note: I'll be talking about [the seed project](https://github.com/mgonto/react-browserify-spa-seed) in an upcoming post. 
 
 I want to focus now on the [scripts section](https://github.com/mgonto/react-browserify-spa-seed/blob/master/package.json#L19-L28) of the `package.json`. Notice first that it's just 9 (yes 9!) lines of code! And I thought that 82 LOC from Gulp were awesome!
+
+```json
+"scripts": {
+  "start": "npm run build-js && npm run build-css && serve .",
+  "watch": "npm run watch-js & npm run watch-css & serve .",
+  
+  "build-css": "rework-npm index.css | cleancss -o build/build.css",
+  "build-js": "browserify --extension=.jsx --extension=.js index.js | uglifyjs > build/build.js",
+  
+  "watch-js": "watchify --extension=.jsx --extension=.js index.js -o build/build.js --debug --verbose",
+  "watch-css": "nodemon -e css --ignore build/build.css --exec 'rework-npm index.css -o build/build.css'"
+}
+```
 
 Let's analyze what we're doing there! The equivalent of the previous `watch` function is [this line](https://github.com/mgonto/react-browserify-spa-seed/blob/master/package.json#L20) which basically just calls simultaneously (notice it's doing `&` and not `&&`) 2 other tasks from the `package.json` and the `serve` function which is installed as a [dev dependency](https://github.com/mgonto/react-browserify-spa-seed/blob/master/package.json#L50). 
 
