@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gulp is awesome, but do we really need it?"
-description: "I've been using Grunt and Gulp for some time now. However, I've realized lately that with a simple package.json I can do the same, but more manteinable and with less code. In this post, I'll explain how we can do it!"
+description: "I've been using Grunt and Gulp for some time now. However, I've realized lately that with a simple package.json I can do the same, but more manteinable and with less code. In this post, I'll explain how we can do it!!"
 date: 2015-02-26 22:58
 image:
   thumb: 2015-02-26-gulp-is-awesome-but-do-we-really-need-it/logo.jpeg
