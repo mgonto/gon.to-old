@@ -7,7 +7,7 @@ reading_time:     true
 words_per_minute: 200
 logo: logos/144x144.png
 # baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
-url: "http://gon.to" # the base hostname & protocol for your site
+# url: "http://gon.to" # the base hostname & protocol for your site
 excerpt_separator: '<!-- more -->'
 
 paginate: 5

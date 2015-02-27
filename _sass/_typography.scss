@@ -16,7 +16,7 @@ a {
 	text-decoration: none;
 	color: $link-color;
 	&:visited {
-		color: lighten($link-color, 20);
+		color: lighten($link-color, 5);
 	}
 	&:hover {
 		color: darken($link-color, 20);
@@ -29,6 +29,25 @@ a {
 	&:active {
 		outline: 0;
 	}
+}
+
+h1 a {
+  text-decoration: none;
+  color: $link-title-color;
+  &:visited {
+    color: lighten($link-title-color, 20);
+  }
+  &:hover {
+    color: darken($link-title-color, 20);
+  }
+  &:focus {
+    outline: thin dotted;
+    color: darken($link-title-color, 20);
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 .link-arrow {
