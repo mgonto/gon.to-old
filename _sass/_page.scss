@@ -211,9 +211,6 @@ header .entry-meta {
 			max-width: 800px;
 			margin: 50px auto 30px auto;
 			padding: 50px 80px;
-			> p:first-child {
-				@include font-size(20);
-			}
 		}
 	}
 	#disqus_thread {

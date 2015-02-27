@@ -63,6 +63,7 @@ figcaption {
 blockquote {
 	font-family: $alt-font;
 	font-style: italic;
+  font-size: 1.1em;
 	border-left: 8px solid $border-color;
 	padding-left: 20px;
 	@media #{$medium} {
@@ -92,7 +93,6 @@ tt, code, kbd, samp, pre {
 p,
 li {
 	code {
-		@include font-rem(12);
 		line-height: 1.5;
 		white-space: nowrap;
 		margin: 0 2px;
