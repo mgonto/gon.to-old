@@ -360,7 +360,11 @@
 
   .p-responsive {
     padding: 1.5rem;
-    padding-top: 0;
+    padding-top: 6rem;
+  }
+
+  .post-content.p-responsive {
+    padding-top: 3rem;
   }
 
   .px-responsive {
@@ -376,7 +380,7 @@
   @media screen and (min-width: 48em) and (max-width: 64em) {
     .p-responsive {
       padding: 3rem;
-      padding-top: 0;
+      padding-top: 6rem;
     }
 
     .px-responsive {
@@ -392,7 +396,7 @@
   @media screen and (min-width: 64em) {
     .p-responsive {
       padding: 4rem;
-      padding-top: 0;
+      padding-top: 5rem;
     }
 
     .px-responsive {

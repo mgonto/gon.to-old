@@ -6,12 +6,12 @@
 
 {% include head.html %}
 
-<body class="{% if site.animated %}animated fade-in-down{% endif %}">
+<body class="post blog-content {% if site.animated %}animated fade-in-down{% endif %}">
 {% assign white = true %}
 {% include header.html %}
 <div class="blog site-wrap">
 
-    <div class="post p2 p-responsive wrap" role="main">
+    <div class="post-content post p2 p-responsive wrap" role="main">
       <div class="measure">
         {% assign minutes = content | number_of_words | divided_by: 180 %}
         {% if minutes == 0 %}
