@@ -6,10 +6,9 @@
 
 {% include head.html %}
 
-<body class="{% if site.animated %}animated fade-in-down{% endif %}">
-{% assign white = true %}
+<body class="blog">
+<div class="site-wrap center">
 {% include header.html %}
-<div class="blog site-wrap">
 
     <div class="post p2 p-responsive wrap" role="main">
       <div class="measure">
@@ -17,8 +16,11 @@
       </div>
     </div>
   </div>
+
+
+  {% include footer.html %}
+  {% include scripts.html %}
+
 </div>
-{% include footer.html %}
-{% include scripts.html %}
 </body>
 </html>

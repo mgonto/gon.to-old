@@ -19,7 +19,9 @@ tags:
   - web
   - webapp
 ---
+
 -----------
+
 **[TL;DR: I&#8217;ve created a new Play Framework Video Course. Please click here to check it out.][1]**
 
 ----------------

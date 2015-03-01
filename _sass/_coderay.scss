@@ -1,16 +1,18 @@
 .CodeRay {
-  font-family: $code-font;
-  @include font(12);
+  font-family: monospace;
+  font-size: 1.5rem;
   color: #d0d0d0;
   margin-bottom: 1.5em;
-  @include rounded(3px);
+  -webkit-border-radius : 3px;
+  -moz-border-radius : 3px;
+  border-radius : 3px;
 }
 
 .CodeRay .code pre {
   margin: 0;
   padding: 1em;
   background-color: #272822;
-  border: 1px solid darken($body-color, 5);
+  border: 1px solid darken(#000, 5);
 }
 
 div.CodeRay { }
