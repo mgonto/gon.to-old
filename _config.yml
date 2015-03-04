@@ -6,7 +6,6 @@ disqus_shortname: gontosblog
 reading_time:     true
 words_per_minute: 200
 logo: logos/144x144.png
-# baseurl: "/gon.to" # the subpath of your site, e.g. /blog/
 url: "http://gon.to" # the base hostname & protocol for your site
 excerpt_separator: '<!-- more -->'
 
@@ -25,6 +24,10 @@ google_analytics: UA-48082910-1
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
+
+assets:
+  js_compressor:  uglifier
+  css_compressor: sass
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
